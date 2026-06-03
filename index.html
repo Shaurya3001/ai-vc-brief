@@ -1303,7 +1303,7 @@ function viewAbout() {
     <h3>Every entry carries</h3>
     <p>A date, geography tags, a section and sub-tag, a 2–3 sentence summary, a <code>why it matters</code> line written for an investor, one or more links into the source registry, and a status of <code>new</code>, <code>updated</code>, or <code>stale</code>.</p>
     <h3>How it stays live</h3>
-    <p>A scheduled job runs every Monday. It uses Claude with web search to research the week's developments across all eight sections and three markets, drafts entries in the atomic schema, and opens a pull request for review before anything publishes.</p>
+    <p>A scheduled job runs every morning. It uses Claude with web search to research the day's developments across all eight sections and three markets, drafts entries in the atomic schema, and opens a pull request for review before anything publishes.</p>
     <div class="pipe-steps">
       <div class="step"><span class="step-num">1</span><span class="step-body"><b>Schedule</b> — GitHub Actions cron fires weekly.</span></div>
       <div class="step"><span class="step-num">2</span><span class="step-body"><b>Research</b> — Claude (Anthropic API + web search) drafts entries per section, with real source URLs.</span></div>
