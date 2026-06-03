@@ -1,0 +1,38 @@
+name: Daily AI brief update
+
+# Runs every day at 06:00 UTC. Also runnable on demand from the Actions tab.
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Draft today's entries with Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/weekly-update.mjs
+
+      - name: Open a pull request with the update
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: daily AI brief update"
+          branch: daily-update
+          delete-branch: true
+          title: "Daily AI brief update"
+          body: |
+            Automated daily refresh drafted by Claude with web search.
+            Review the new entries and sources, then merge to publish.
+          labels: automated, daily-update

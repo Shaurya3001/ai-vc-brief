@@ -1,0 +1,106 @@
+{
+  "geographies": ["US", "Canada", "India", "Global"],
+  "statuses": ["new", "updated", "stale"],
+  "source_types": ["filing", "press", "research", "blog", "analysis", "data", "gov"],
+  "clusters": [
+    { "id": "stack", "label": "The stack", "blurb": "What's being built" },
+    { "id": "market", "label": "The market", "blurb": "Players & money" },
+    { "id": "environment", "label": "The environment", "blurb": "Rules & people" },
+    { "id": "synthesis", "label": "Synthesis", "blurb": "The so-what" }
+  ],
+  "sections": [
+    {
+      "id": "capital", "cluster": "market", "label": "Capital & funding",
+      "blurb": "The transaction layer: money in motion.",
+      "subtags": [
+        { "id": "fund-formation", "label": "Fund formation" },
+        { "id": "rounds", "label": "Rounds & valuations" },
+        { "id": "exits", "label": "Exits & liquidity" },
+        { "id": "investor-activity", "label": "Investor activity" }
+      ],
+      "cadence": "daily"
+    },
+    {
+      "id": "companies", "cluster": "market", "label": "Companies & landscape",
+      "blurb": "The entity layer: who exists and where they sit in the stack.",
+      "subtags": [
+        { "id": "market-maps", "label": "Market maps" },
+        { "id": "breakouts", "label": "Breakouts & watchlist" },
+        { "id": "incumbents", "label": "Incumbent moves" },
+        { "id": "profiles", "label": "Company profiles" }
+      ],
+      "cadence": "weekly"
+    },
+    {
+      "id": "technology", "cluster": "stack", "label": "Technology & capability",
+      "blurb": "The capability layer: what actually changed in the models.",
+      "subtags": [
+        { "id": "model-releases", "label": "Model releases" },
+        { "id": "research", "label": "Research breakthroughs" },
+        { "id": "modalities", "label": "Modalities" },
+        { "id": "paradigms", "label": "Paradigms" },
+        { "id": "safety-eval", "label": "Safety & eval" }
+      ],
+      "cadence": "daily"
+    },
+    {
+      "id": "infrastructure", "cluster": "stack", "label": "Infrastructure & compute",
+      "blurb": "The physical substrate: chips, data centers, power.",
+      "subtags": [
+        { "id": "chips", "label": "Chips & accelerators" },
+        { "id": "datacenters", "label": "Data centers & capex" },
+        { "id": "energy", "label": "Energy & power" },
+        { "id": "cloud-gpu", "label": "Cloud & GPU supply" },
+        { "id": "sovereign-compute", "label": "Sovereign compute" }
+      ],
+      "cadence": "weekly"
+    },
+    {
+      "id": "adoption", "cluster": "market", "label": "Market & adoption",
+      "blurb": "The demand layer: is anyone buying and making money.",
+      "subtags": [
+        { "id": "enterprise-spend", "label": "Enterprise spend" },
+        { "id": "revenue-benchmarks", "label": "Revenue benchmarks" },
+        { "id": "use-cases", "label": "Use-case traction" },
+        { "id": "pilots", "label": "Pilot-to-production" }
+      ],
+      "cadence": "weekly"
+    },
+    {
+      "id": "policy", "cluster": "environment", "label": "Policy, regulation & geopolitics",
+      "blurb": "The rules layer. The most country-divergent section.",
+      "subtags": [
+        { "id": "regulation", "label": "AI regulation" },
+        { "id": "data-privacy", "label": "Data & privacy" },
+        { "id": "export-controls", "label": "Export controls & trade" },
+        { "id": "immigration", "label": "Immigration & talent policy" },
+        { "id": "gov-strategy", "label": "Government / sovereign AI" },
+        { "id": "ip-copyright", "label": "IP & copyright" }
+      ],
+      "cadence": "event"
+    },
+    {
+      "id": "talent", "cluster": "environment", "label": "Talent & people",
+      "blurb": "The human layer: a leading indicator VCs read closely.",
+      "subtags": [
+        { "id": "founder-moves", "label": "Founder formation & moves" },
+        { "id": "key-hires", "label": "Key hires & departures" },
+        { "id": "pipelines", "label": "University & research pipelines" },
+        { "id": "diaspora", "label": "Diaspora & return flows" },
+        { "id": "comp", "label": "Compensation trends" }
+      ],
+      "cadence": "weekly"
+    },
+    {
+      "id": "theses", "cluster": "synthesis", "label": "Theses & open questions",
+      "blurb": "The editorial layer: white space, debates, and calls.",
+      "subtags": [
+        { "id": "thesis", "label": "Active thesis" },
+        { "id": "debate", "label": "Live debate" },
+        { "id": "prediction", "label": "Prediction & scorecard" },
+        { "id": "watching", "label": "What we're watching" }
+      ],
+      "cadence": "monthly"
+    }
+  ]
+}

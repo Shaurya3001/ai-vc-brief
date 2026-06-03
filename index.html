@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Brief By Shaurya Gulati — VC Intelligence · US · Canada · India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:       #080D16;
+    --bg-2:     #0C1220;
+    --surface:  #111827;
+    --card:     #151E2E;
+    --card-2:   #1A2438;
+    --border:   #1E2D45;
+    --border-2: #2A3F60;
+    --text:     #E2E8F7;
+    --text-2:   #7F92BB;
+    --text-3:   #4A5878;
+    --accent:   #6366F1;
+    --accent-2: #818CF8;
+    --accent-g: rgba(99,102,241,0.12);
+    --new:      #10B981;
+    --new-bg:   rgba(16,185,129,0.1);
+    --updated:  #F59E0B;
+    --upd-bg:   rgba(245,158,11,0.1);
+    --stale:    #475569;
+    --stale-bg: rgba(71,85,105,0.12);
+    --us:       #3B82F6;
+    --canada:   #EF4444;
+    --india:    #FBBF24;
+    --global:   #34D399;
+    --c-capital:        #F59E0B;
+    --c-companies:      #6366F1;
+    --c-technology:     #8B5CF6;
+    --c-infrastructure: #0EA5E9;
+    --c-adoption:       #10B981;
+    --c-policy:         #EF4444;
+    --c-talent:         #F97316;
+    --c-theses:         #EC4899;
+    --mono:    "JetBrains Mono", ui-monospace, monospace;
+    --sans:    "Inter", system-ui, sans-serif;
+    --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+    --r:  10px;
+    --rs: 6px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── grid texture ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(30,45,69,0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30,45,69,0.5) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+  /* ── HEADER ── */
+  header.mast {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(8,13,22,0.88);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--border);
+  }
+  header.mast::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 33%, #EC4899 66%, #6366F1 100%);
+    background-size: 200% 100%;
+    animation: flow 5s linear infinite;
+  }
+  @keyframes flow { to { background-position: -200% 0; } }
+
+  .mast-top {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 14px 0 10px;
+  }
+  .brand { display: flex; flex-direction: column; gap: 3px; }
+  .brand h1 {
+    font-family: var(--display);
+    font-weight: 700; font-size: 24px; line-height: 1; letter-spacing: -0.03em;
+    background: linear-gradient(130deg, #E2E8F7 30%, #818CF8 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .brand .sub {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--text-3);
+  }
+  .live-badge { display: flex; align-items: center; gap: 10px; }
+  .live-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--new); flex-shrink: 0;
+    box-shadow: 0 0 0 0 rgba(16,185,129,0.5);
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 0 0 rgba(16,185,129,0.5); }
+    50%      { box-shadow: 0 0 0 7px rgba(16,185,129,0); }
+  }
+  .live-text {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--text-3); line-height: 1.65;
+  }
+  .live-text b { color: var(--new); font-weight: 500; }
+
+  /* stats strip */
+  .stats-strip {
+    display: flex; gap: 0; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .stats-strip::-webkit-scrollbar { display: none; }
+  .stat-item {
+    padding: 8px 20px; border-right: 1px solid var(--border);
+    display: flex; align-items: center; gap: 10px; white-space: nowrap;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-n {
+    font-family: var(--display); font-size: 17px; font-weight: 700;
+    color: var(--text); letter-spacing: -0.03em;
+  }
+  .stat-label {
+    font-family: var(--mono); font-size: 9px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--text-3);
+  }
+
+  /* tabs */
+  nav.tabs {
+    display: flex; gap: 0; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none;
+  }
+  nav.tabs::-webkit-scrollbar { display: none; }
+  nav.tabs button {
+    appearance: none; background: none; border: none; cursor: pointer;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--text-3);
+    padding: 11px 18px; white-space: nowrap;
+    border-bottom: 2px solid transparent; transition: all 0.18s ease;
+    display: flex; align-items: center; gap: 7px;
+  }
+  nav.tabs button:hover { color: var(--text-2); background: rgba(255,255,255,0.02); }
+  nav.tabs button[aria-current="true"] { color: var(--accent-2); border-bottom-color: var(--accent); }
+  nav.tabs button .ct {
+    background: var(--surface); color: var(--text-3);
+    font-size: 9px; padding: 1px 6px; border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  nav.tabs button[aria-current="true"] .ct {
+    background: var(--accent-g); color: var(--accent-2); border-color: var(--accent);
+  }
+
+  /* ── TOOLBAR ── */
+  .toolbar {
+    display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+    padding: 16px 0; border-bottom: 1px solid var(--border);
+  }
+  .search {
+    flex: 1; min-width: 200px; display: flex; align-items: center; gap: 10px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--rs); padding: 9px 13px; transition: all 0.18s;
+  }
+  .search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-g); }
+  .search input {
+    border: none; background: none; outline: none;
+    font-family: var(--sans); font-size: 13.5px; width: 100%; color: var(--text);
+  }
+  .search input::placeholder { color: var(--text-3); }
+  .search svg { flex: none; color: var(--text-3); }
+
+  .filter-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .filterlabel {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--text-3);
+  }
+  .chip {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.05em; text-transform: uppercase;
+    border: 1px solid var(--border); background: var(--surface); color: var(--text-3);
+    padding: 5px 11px; border-radius: 20px; cursor: pointer;
+    display: flex; align-items: center; gap: 5px; transition: all 0.15s ease;
+  }
+  .chip:hover { border-color: var(--border-2); color: var(--text-2); }
+  .chip[aria-pressed="true"] { background: var(--accent-g); color: var(--accent-2); border-color: var(--accent); }
+  .chip .geodot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+  /* sample banner */
+  .banner {
+    background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.22);
+    border-radius: var(--rs); font-family: var(--mono); font-size: 11px; color: #D97706;
+    padding: 10px 14px; margin-top: 16px; display: flex; gap: 10px; line-height: 1.55;
+  }
+
+  /* ── MAIN ── */
+  main { padding: 8px 0 80px; min-height: 60vh; }
+
+  .lede {
+    font-size: 14.5px; line-height: 1.7; color: var(--text-2);
+    margin: 22px 0 26px; max-width: 68ch;
+  }
+
+  /* cluster / section headings */
+  .cluster-head {
+    display: flex; align-items: center; gap: 12px;
+    margin: 44px 0 10px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .cl-badge {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--text-3);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 3px 8px; border-radius: 4px;
+  }
+  .cl-label {
+    font-family: var(--display); font-size: 13px; font-weight: 600; color: var(--text-2);
+  }
+  .cl-blurb { font-family: var(--mono); font-size: 10px; color: var(--text-3); margin-left: auto; }
+
+  .sec-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    margin: 24px 0 12px;
+  }
+  .sec-head-left { display: flex; align-items: center; gap: 10px; }
+  .sec-dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+    box-shadow: 0 0 8px currentColor;
+  }
+  .sec-head h3 {
+    font-family: var(--display); font-weight: 600; font-size: 19px;
+    letter-spacing: -0.02em; color: var(--text);
+  }
+  .sec-meta {
+    font-family: var(--mono); font-size: 9.5px; color: var(--text-3);
+    text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap;
+  }
+  .sec-blurb { font-size: 13px; color: var(--text-3); margin: -8px 0 16px; }
+
+  /* ── ENTRY CARDS ── */
+  .feed { display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; }
+
+  .entry {
+    background: var(--card); border: 1px solid var(--border);
+    border-left-width: 3px; border-radius: var(--r);
+    padding: 18px 20px; transition: all 0.2s ease; position: relative; overflow: hidden;
+  }
+  .entry::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.025) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .entry:hover {
+    background: var(--card-2); border-color: var(--border-2);
+    transform: translateY(-1px); box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+  }
+  .entry[data-section="capital"]        { border-left-color: var(--c-capital); }
+  .entry[data-section="companies"]      { border-left-color: var(--c-companies); }
+  .entry[data-section="technology"]     { border-left-color: var(--c-technology); }
+  .entry[data-section="infrastructure"] { border-left-color: var(--c-infrastructure); }
+  .entry[data-section="adoption"]       { border-left-color: var(--c-adoption); }
+  .entry[data-section="policy"]         { border-left-color: var(--c-policy); }
+  .entry[data-section="talent"]         { border-left-color: var(--c-talent); }
+  .entry[data-section="theses"]         { border-left-color: var(--c-theses); }
+
+  .entry-top {
+    display: flex; align-items: center; gap: 7px; flex-wrap: wrap; margin-bottom: 10px;
+  }
+  .e-date { font-family: var(--mono); font-size: 10.5px; color: var(--text-3); }
+  .e-sec {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--text-3); background: var(--surface); border: 1px solid var(--border);
+    padding: 2px 7px; border-radius: 4px;
+  }
+  .geo {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--text-3); display: inline-flex; align-items: center; gap: 4px;
+  }
+  .geo .geodot { width: 6px; height: 6px; border-radius: 50%; }
+
+  .status {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 12px; margin-left: auto; font-weight: 500;
+  }
+  .status.new     { background: var(--new-bg); color: var(--new);     border: 1px solid rgba(16,185,129,0.25); }
+  .status.updated { background: var(--upd-bg); color: var(--updated); border: 1px solid rgba(245,158,11,0.25); }
+  .status.stale   { background: var(--stale-bg); color: var(--stale); border: 1px solid rgba(71,85,105,0.25); }
+
+  .entry h4 {
+    font-family: var(--display); font-weight: 600; font-size: 17px;
+    line-height: 1.3; letter-spacing: -0.02em; color: var(--text); margin: 0 0 10px;
+  }
+  .summary {
+    font-size: 13.5px; color: var(--text-2); line-height: 1.65;
+    margin: 0 0 12px; max-width: 76ch;
+  }
+  .why {
+    border-left: 2px solid var(--accent); padding: 5px 0 5px 14px;
+    margin: 0 0 12px; max-width: 72ch;
+    background: var(--accent-g); border-radius: 0 var(--rs) var(--rs) 0;
+  }
+  .why .lbl {
+    font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent-2); display: block; margin-bottom: 3px;
+  }
+  .why p { font-size: 13px; color: var(--text-2); font-style: italic; margin: 0; line-height: 1.55; }
+
+  .srcs { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+  .slbl {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--text-3);
+  }
+  .src {
+    font-family: var(--mono); font-size: 10.5px; color: var(--text-3);
+    border: 1px solid var(--border); background: var(--surface);
+    padding: 2px 9px; border-radius: 4px;
+    display: inline-flex; align-items: center; gap: 5px; transition: all 0.15s;
+  }
+  .src:hover { color: var(--accent-2); border-color: var(--accent); }
+  .src .stype {
+    font-size: 8px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--text-3); background: var(--card); padding: 0 3px; border-radius: 2px;
+  }
+
+  /* ── COUNTRIES ── */
+  .ctry-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 16px; margin: 24px 0;
+  }
+  .ctry-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--r); padding: 20px; transition: all 0.2s ease;
+  }
+  .ctry-card:hover { border-color: var(--border-2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+  .ctry-card-header {
+    display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;
+  }
+  .ctry-card h3 {
+    font-family: var(--display); font-weight: 600; font-size: 18px;
+    display: flex; align-items: center; gap: 8px; color: var(--text);
+  }
+  .ctry-flag { font-size: 20px; }
+  .cc-count {
+    font-family: var(--mono); font-size: 9.5px; color: var(--text-3);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 3px 9px; border-radius: 12px;
+  }
+  .bars { display: flex; flex-direction: column; gap: 6px; }
+  .bar {
+    display: grid; grid-template-columns: 108px 1fr 22px;
+    align-items: center; gap: 9px;
+    font-family: var(--mono); font-size: 9.5px; color: var(--text-3);
+    cursor: pointer; padding: 3px 4px; border-radius: 4px; transition: background 0.15s;
+  }
+  .bar:hover { background: var(--surface); }
+  .bar:hover .bar-label { color: var(--text-2); }
+  .bar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bar-track {
+    height: 5px; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 3px; overflow: hidden;
+  }
+  .bar-fill { height: 100%; border-radius: 3px; transition: width 0.9s cubic-bezier(0.4,0,0.2,1); }
+  .bar-n { text-align: right; }
+  .fill-us     { background: linear-gradient(90deg, #3B82F6, #60A5FA); }
+  .fill-canada { background: linear-gradient(90deg, #EF4444, #F87171); }
+  .fill-india  { background: linear-gradient(90deg, #FBBF24, #FCD34D); }
+
+  .ctry-feed-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin: 30px 0 14px; padding-top: 26px; border-top: 1px solid var(--border);
+  }
+  .ctry-feed-head h3 {
+    font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--text);
+  }
+  .ctry-feed-head .meta {
+    font-family: var(--mono); font-size: 9.5px; color: var(--text-3);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  /* ── SOURCES TABLE ── */
+  .srcreg-wrap {
+    overflow-x: auto; margin-top: 22px;
+    border: 1px solid var(--border); border-radius: var(--r);
+  }
+  table.srcreg { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--card); }
+  table.srcreg th {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-3); text-align: left; padding: 12px 14px;
+    border-bottom: 1px solid var(--border); background: var(--surface); white-space: nowrap;
+  }
+  table.srcreg td {
+    padding: 12px 14px; border-bottom: 1px solid var(--border);
+    vertical-align: top; color: var(--text-2);
+  }
+  table.srcreg tr:last-child td { border-bottom: none; }
+  table.srcreg tr:hover td { background: rgba(255,255,255,0.015); }
+  .pubtype {
+    font-family: var(--mono); font-size: 9px; text-transform: uppercase; letter-spacing: 0.06em;
+    border: 1px solid var(--border); padding: 2px 6px; border-radius: 4px; color: var(--text-3);
+  }
+  .srcreg a { color: var(--accent-2); font-family: var(--mono); font-size: 11px; transition: color 0.15s; }
+  .srcreg a:hover { color: var(--text); }
+
+  /* ── ABOUT ── */
+  .about { max-width: 66ch; color: var(--text-2); line-height: 1.72; padding-top: 8px; }
+  .about h3 {
+    font-family: var(--display); font-weight: 600; font-size: 17px;
+    color: var(--text); margin: 30px 0 8px; letter-spacing: -0.01em;
+  }
+  .about p { margin: 0 0 12px; font-size: 14px; }
+  .about code {
+    font-family: var(--mono); font-size: 11.5px; background: var(--surface);
+    border: 1px solid var(--border); padding: 1px 5px; border-radius: 4px; color: var(--accent-2);
+  }
+  .pipe-steps {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--r); padding: 20px 22px; margin: 16px 0;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .step { display: flex; gap: 13px; align-items: flex-start; font-size: 13.5px; }
+  .step-num {
+    font-family: var(--mono); font-size: 9.5px; font-weight: 600; color: var(--accent-2);
+    background: var(--accent-g); border: 1px solid var(--accent); border-radius: 50%;
+    width: 22px; height: 22px; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .step-body { color: var(--text-2); }
+  .step-body b { color: var(--text); font-weight: 600; }
+
+  .empty {
+    font-family: var(--mono); font-size: 11.5px; color: var(--text-3);
+    padding: 60px 0; text-align: center; letter-spacing: 0.05em;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border); padding: 24px 0 44px;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-left { display: flex; flex-direction: column; gap: 5px; }
+  .footer-brand {
+    font-family: var(--display); font-size: 13px; font-weight: 600; color: var(--text-2);
+  }
+  .footer-contact {
+    font-family: var(--mono); font-size: 10.5px; color: var(--text-3);
+  }
+  .footer-contact a {
+    color: var(--accent-2); transition: color 0.15s;
+  }
+  .footer-contact a:hover { color: var(--text); }
+  .footer-right {
+    text-align: right; font-family: var(--mono); font-size: 10px;
+    color: var(--text-3); line-height: 1.9;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .brand h1 { font-size: 20px; }
+    .live-text { display: none; }
+    .entry h4 { font-size: 16px; }
+    .sec-head h3 { font-size: 17px; }
+    .ctry-grid { grid-template-columns: 1fr; }
+    .stat-item { padding: 8px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="mast-top">
+      <div class="brand">
+        <h1>The AI Brief <span style="font-weight:400;opacity:0.6;font-size:0.7em">by Shaurya Gulati</span></h1>
+        <div class="sub">Venture Intelligence · United States · Canada · India</div>
+      </div>
+      <div class="live-badge">
+        <div class="live-dot"></div>
+        <div class="live-text" id="asof"></div>
+      </div>
+    </div>
+    <div class="stats-strip" id="statsstrip"></div>
+    <nav class="tabs" id="tabs"></nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div id="banner"></div>
+  <div class="toolbar">
+    <label class="search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+      </svg>
+      <input id="q" type="text" placeholder="Search the brief…" autocomplete="off" aria-label="Search entries">
+    </label>
+    <div class="filter-group" id="geochips"></div>
+    <div class="filter-group" id="statuschips"></div>
+  </div>
+  <main id="main"></main>
+</div>
+
+<div class="wrap">
+  <footer>
+    <div class="footer-left">
+      <div class="footer-brand">Shaurya Gulati</div>
+      <div class="footer-contact">
+        <a href="mailto:shauryagulati3001@gmail.com">shauryagulati3001@gmail.com</a>
+             </div>
+    </div>
+    <div class="footer-right" id="foot-stats"></div>
+  </footer>
+</div>
+
+<!-- ── Embedded fallback data (offline / direct file:// open) ── -->
+<script id="embedded-taxonomy" type="application/json">
+{
+  "geographies": ["US", "Canada", "India", "Global"],
+  "statuses": ["new", "updated", "stale"],
+  "source_types": ["filing", "press", "research", "blog", "analysis", "data", "gov"],
+  "clusters": [
+    { "id": "stack", "label": "The stack", "blurb": "What's being built" },
+    { "id": "market", "label": "The market", "blurb": "Players & money" },
+    { "id": "environment", "label": "The environment", "blurb": "Rules & people" },
+    { "id": "synthesis", "label": "Synthesis", "blurb": "The so-what" }
+  ],
+  "sections": [
+    {
+      "id": "capital", "cluster": "market", "label": "Capital & funding",
+      "blurb": "The transaction layer: money in motion.",
+      "subtags": [
+        { "id": "fund-formation", "label": "Fund formation" },
+        { "id": "rounds", "label": "Rounds & valuations" },
+        { "id": "exits", "label": "Exits & liquidity" },
+        { "id": "investor-activity", "label": "Investor activity" }
+      ],
+      "cadence": "daily"
+    },
+    {
+      "id": "companies", "cluster": "market", "label": "Companies & landscape",
+      "blurb": "The entity layer: who exists and where they sit in the stack.",
+      "subtags": [
+        { "id": "market-maps", "label": "Market maps" },
+        { "id": "breakouts", "label": "Breakouts & watchlist" },
+        { "id": "incumbents", "label": "Incumbent moves" },
+        { "id": "profiles", "label": "Company profiles" }
+      ],
+      "cadence": "weekly"
+    },
+    {
+      "id": "technology", "cluster": "stack", "label": "Technology & capability",
+      "blurb": "The capability layer: what actually changed in the models.",
+      "subtags": [
+        { "id": "model-releases", "label": "Model releases" },
+        { "id": "research", "label": "Research breakthroughs" },
+        { "id": "modalities", "label": "Modalities" },
+        { "id": "paradigms", "label": "Paradigms" },
+        { "id": "safety-eval", "label": "Safety & eval" }
+      ],
+      "cadence": "daily"
+    },
+    {
+      "id": "infrastructure", "cluster": "stack", "label": "Infrastructure & compute",
+      "blurb": "The physical substrate: chips, data centers, power.",
+      "subtags": [
+        { "id": "chips", "label": "Chips & accelerators" },
+        { "id": "datacenters", "label": "Data centers & capex" },
+        { "id": "energy", "label": "Energy & power" },
+        { "id": "cloud-gpu", "label": "Cloud & GPU supply" },
+        { "id": "sovereign-compute", "label": "Sovereign compute" }
+      ],
+      "cadence": "weekly"
+    },
+    {
+      "id": "adoption", "cluster": "market", "label": "Market & adoption",
+      "blurb": "The demand layer: is anyone buying and making money.",
+      "subtags": [
+        { "id": "enterprise-spend", "label": "Enterprise spend" },
+        { "id": "revenue-benchmarks", "label": "Revenue benchmarks" },
+        { "id": "use-cases", "label": "Use-case traction" },
+        { "id": "pilots", "label": "Pilot-to-production" }
+      ],
+      "cadence": "weekly"
+    },
+    {
+      "id": "policy", "cluster": "environment", "label": "Policy, regulation & geopolitics",
+      "blurb": "The rules layer. The most country-divergent section.",
+      "subtags": [
+        { "id": "regulation", "label": "AI regulation" },
+        { "id": "data-privacy", "label": "Data & privacy" },
+        { "id": "export-controls", "label": "Export controls & trade" },
+        { "id": "immigration", "label": "Immigration & talent policy" },
+        { "id": "gov-strategy", "label": "Government / sovereign AI" },
+        { "id": "ip-copyright", "label": "IP & copyright" }
+      ],
+      "cadence": "event"
+    },
+    {
+      "id": "talent", "cluster": "environment", "label": "Talent & people",
+      "blurb": "The human layer: a leading indicator VCs read closely.",
+      "subtags": [
+        { "id": "founder-moves", "label": "Founder formation & moves" },
+        { "id": "key-hires", "label": "Key hires & departures" },
+        { "id": "pipelines", "label": "University & research pipelines" },
+        { "id": "diaspora", "label": "Diaspora & return flows" },
+        { "id": "comp", "label": "Compensation trends" }
+      ],
+      "cadence": "weekly"
+    },
+    {
+      "id": "theses", "cluster": "synthesis", "label": "Theses & open questions",
+      "blurb": "The editorial layer: white space, debates, and calls.",
+      "subtags": [
+        { "id": "thesis", "label": "Active thesis" },
+        { "id": "debate", "label": "Live debate" },
+        { "id": "prediction", "label": "Prediction & scorecard" },
+        { "id": "watching", "label": "What we're watching" }
+      ],
+      "cadence": "monthly"
+    }
+  ]
+}
+</script>
+<script id="embedded-sources" type="application/json">
+{
+  "sources": [
+    { "id": "src-2026-05-28-crunchbase-ai-rounds", "title": "Biggest AI Funding Rounds – Anthropic, Cognition and More", "publisher": "Crunchbase News", "type": "data", "date": "2026-05-28", "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-autonomy-biotech-anthropic/", "archive_url": "" },
+    { "id": "src-2026-05-ibtimes-india-ai", "title": "India's Top AI Companies 2026 – Sarvam AI, Krutrim Lead Sovereign Push Amid $2.9B Funding Boom", "publisher": "IBTimes", "type": "analysis", "date": "2026-05-01", "url": "https://www.ibtimes.com.au/indias-top-10-ai-companies-2026-sarvam-ai-krutrim-lead-sovereign-push-amid-29b-funding-boom-1866020", "archive_url": "" },
+    { "id": "src-2026-05-05-techcrunch-krutrim", "title": "India's first GenAI unicorn shifts to cloud services as AI model ambitions face reality", "publisher": "TechCrunch", "type": "press", "date": "2026-05-05", "url": "https://techcrunch.com/2026/05/05/indias-first-genai-unicorn-shifts-to-cloud-services-as-ai-model-ambitions-face-reality/", "archive_url": "" },
+    { "id": "src-2026-04-techfundingnews-cohere-aleph", "title": "Cohere–Aleph Alpha Merger: $20B Valuation, Schwarz Group $600M", "publisher": "TechFundingNews", "type": "press", "date": "2026-04-24", "url": "https://techfundingnews.com/ohere-aleph-alpha-merger-20b-valuation-schwarz-group-600m/", "archive_url": "" },
+    { "id": "src-2026-05-13-techcrunch-notion", "title": "Notion just turned its workspace into a hub for AI agents", "publisher": "TechCrunch", "type": "press", "date": "2026-05-13", "url": "https://techcrunch.com/2026/05/13/notion-just-turned-its-workspace-into-a-hub-for-ai-agents/", "archive_url": "" },
+    { "id": "src-2026-05-19-cnbc-google-io", "title": "Google unveils Gemini AI Ultra subscription and Spark agent at IO 2026", "publisher": "CNBC", "type": "press", "date": "2026-05-19", "url": "https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html", "archive_url": "" },
+    { "id": "src-2026-05-19-google-blog-search", "title": "What's new in Search at Google IO 2026", "publisher": "Google", "type": "blog", "date": "2026-05-19", "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/", "archive_url": "" },
+    { "id": "src-2026-05-whatllm-models", "title": "New AI Models — May 2026 Roundup", "publisher": "WhatLLM", "type": "analysis", "date": "2026-05-20", "url": "https://whatllm.org/blog/new-ai-models-may-2026", "archive_url": "" },
+    { "id": "src-2026-03-nvidia-rubin", "title": "NVIDIA Rubin Platform AI Supercomputer Announcement", "publisher": "NVIDIA", "type": "press", "date": "2026-03-17", "url": "https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer", "archive_url": "" },
+    { "id": "src-2026-06-datacenterdyn-intel", "title": "Intel teases Crescent Island AI data center GPU with up to 480GB LPDDR5X", "publisher": "Data Center Dynamics", "type": "press", "date": "2026-06-02", "url": "https://www.datacenterdynamics.com/en/news/intel-teases-crescent-island-ai-data-center-gpu-supports-up-to-480gb-of-lpddr5x/", "archive_url": "" },
+    { "id": "src-2026-05-betakit-cohere-compute", "title": "Cohere secures federal backing to build multibillion-dollar Canadian AI data centre", "publisher": "BetaKit", "type": "press", "date": "2026-05-15", "url": "https://betakit.com/cohere-secures-federal-backing-to-build-multibillion-dollar-canadian-ai-data-centre/", "archive_url": "" },
+    { "id": "src-2026-05-abhs-indiaai", "title": "IndiaAI Mission: 34,000 GPUs at cheap compute rates for developers in 2026", "publisher": "ABHS", "type": "gov", "date": "2026-05-15", "url": "https://www.abhs.in/blog/indiaai-mission-34000-gpus-cheap-compute-developers-2026", "archive_url": "" },
+    { "id": "src-2026-05-deloitte-ai-enterprise", "title": "State of AI in the Enterprise 2026", "publisher": "Deloitte", "type": "research", "date": "2026-05-01", "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html", "archive_url": "" },
+    { "id": "src-2026-05-writer-enterprise-roi", "title": "Enterprise AI Adoption 2026: The ROI Gap", "publisher": "Writer", "type": "analysis", "date": "2026-05-10", "url": "https://writer.com/blog/enterprise-ai-adoption-2026/", "archive_url": "" },
+    { "id": "src-2026-05-techfundingnews-cohere-ipo", "title": "Enterprise AI Giant Cohere Builds Momentum Towards IPO, Surpasses $240M ARR", "publisher": "TechFundingNews", "type": "press", "date": "2026-05-20", "url": "https://techfundingnews.com/enterprise-ai-giant-cohere-builds-momentum-towards-ipo-surpasses-240m-arr/", "archive_url": "" },
+    { "id": "src-2026-06-01-aljazeera-chip-ban", "title": "US says ban on AI chip shipments applies to Chinese firms outside China", "publisher": "Al Jazeera", "type": "press", "date": "2026-06-01", "url": "https://www.aljazeera.com/economy/2026/6/1/us-says-ban-on-ai-chip-shipments-applies-to-chinese-firms-outside-china", "archive_url": "" },
+    { "id": "src-2026-05-aicerts-eu-controls", "title": "EU Drafts Ambitious AI Export Controls", "publisher": "AICerts", "type": "analysis", "date": "2026-05-20", "url": "https://www.aicerts.ai/news/eu-drafts-ambitious-ai-export-controls/", "archive_url": "" },
+    { "id": "src-2026-05-mindfoundry-india-regs", "title": "AI Regulations Around the World – India", "publisher": "MindFoundry", "type": "analysis", "date": "2026-05-15", "url": "https://www.mindfoundry.ai/blog/ai-regulations-around-the-world", "archive_url": "" },
+    { "id": "src-2026-05-14-americanbazaar-tm", "title": "One Third of Thinking Machines Lab Founding Team Exits", "publisher": "American Bazaar Online", "type": "press", "date": "2026-05-14", "url": "https://americanbazaaronline.com/2026/05/14/one-third-of-thinking-machines-lab-founding-team-exits-480782/", "archive_url": "" },
+    { "id": "src-2026-05-14-thenextweb-meta", "title": "Meta poaches key talent from Thinking Machines Lab", "publisher": "The Next Web", "type": "press", "date": "2026-05-14", "url": "https://thenextweb.com/news/meta-thinking-machines-lab-talent-raid", "archive_url": "" },
+    { "id": "src-2026-05-15-techstartups-xai-exodus", "title": "SpaceXAI exodus: more than 50 AI researchers leave Elon Musk's venture", "publisher": "TechStartups", "type": "press", "date": "2026-05-15", "url": "https://techstartups.com/2026/05/15/spacexai-exodus-more-than-50-ai-researchers-leave-elon-musks-venture-as-meta-and-thinking-machines-poach-talent/", "archive_url": "" },
+    { "id": "src-2026-05-jobsbyculture-openai", "title": "OpenAI Layoffs and Leadership Changes 2026", "publisher": "JobsByCulture", "type": "analysis", "date": "2026-05-20", "url": "https://jobsbyculture.com/blog/openai-layoffs-2026", "archive_url": "" },
+    { "id": "src-2026-05-aicorner-andreessen-moat", "title": "Marc Andreessen: The AI Moat is Not the Model", "publisher": "The AI Corner", "type": "blog", "date": "2026-05-20", "url": "https://www.the-ai-corner.com/p/marc-andreessen-ai-moat-not-the-model-2026", "archive_url": "" },
+    { "id": "src-2026-05-vccorner-outcome-pricing", "title": "VCs' 2026 Tech Bets: AI's Next Moat and Services-as-Software", "publisher": "The VC Corner", "type": "analysis", "date": "2026-05-15", "url": "https://www.thevccorner.com/p/vcs-2026-tech-bets-ais-next-moat", "archive_url": "" },
+    { "id": "src-2026-05-21-techcrunch-consumer-agents", "title": "Google is pitching an AI agent ecosystem to consumers who may not buy it", "publisher": "TechCrunch", "type": "press", "date": "2026-05-21", "url": "https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/", "archive_url": "" }
+  ]
+}
+</script>
+<script id="embedded-entries" type="application/json">
+{
+  "entries": [
+    {
+      "id": "2026-05-28-anthropic-65b-series-h",
+      "title": "Anthropic closes $65 billion Series H at $965 billion valuation",
+      "date": "2026-05-28",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "capital",
+      "subtag": "rounds",
+      "geography": ["US"],
+      "status": "new",
+      "summary": "Anthropic closed the largest private financing in history — a $65 billion Series H led by Altimeter, Dragoneer, Greenoaks, and Sequoia — pushing its valuation to $965 billion. Sovereign and crossover investors participated alongside leading venture firms, cementing Anthropic as the most valuable private AI company. The round closed within weeks of being announced.",
+      "why_it_matters": "Resets the ceiling for foundation-model rounds and signals that LPs will write checks at near-trillion valuations; the secondary read is that frontier-lab capex is now structurally decoupled from public-market multiples.",
+      "sources": ["src-2026-05-28-crunchbase-ai-rounds"]
+    },
+    {
+      "id": "2026-05-01-cognition-ai-1b-series-d",
+      "title": "Cognition AI raises $1B+ Series D as agentic-coding category matures",
+      "date": "2026-05-01",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "capital",
+      "subtag": "rounds",
+      "geography": ["US"],
+      "status": "new",
+      "summary": "Cognition AI, maker of the Devin software agent, closed a $1 billion-plus Series D co-led by Lux Capital, General Catalyst, and 8VC, with its valuation more than doubling in under eight months. The round comes despite intensifying competition from Cursor and Windsurf. Cognition is now among the fastest-growing agentic-coding companies by ARR.",
+      "why_it_matters": "Validates the agentic-coding category and suggests pricing power survives competition; investors are betting that workflow integration and trust — not raw model quality — will determine the winner.",
+      "sources": ["src-2026-05-28-crunchbase-ai-rounds"]
+    },
+    {
+      "id": "2026-04-01-india-q1-ai-funding-record",
+      "title": "India AI startups capture $1.48B of Q1 funding as Sarvam closes $53M Series A",
+      "date": "2026-04-01",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "capital",
+      "subtag": "investor-activity",
+      "geography": ["India"],
+      "status": "new",
+      "summary": "Indian AI startups attracted $1.48 billion in Q1 2026, representing 38% of total startup funding in the country, with Sarvam AI's $53 million Series A — backed by Lightspeed, Peak XV, and Khosla — among the marquee deals. However, Krutrim, India's first GenAI unicorn, pivoted from model development to cloud services amid commercial headwinds, illustrating the difficulty of competing at the model layer. Global funds participated in a growing share of early-stage rounds.",
+      "why_it_matters": "India is a high-velocity early-stage AI market, but the Krutrim pivot confirms that model-layer economics are brutal domestically — the investable thesis is distribution, applied AI, and sovereign-compute-adjacent tooling.",
+      "sources": ["src-2026-05-ibtimes-india-ai", "src-2026-05-05-techcrunch-krutrim"]
+    },
+    {
+      "id": "2026-04-24-cohere-aleph-alpha-merger",
+      "title": "Cohere and Aleph Alpha merge to create $20B transatlantic sovereign-AI champion",
+      "date": "2026-04-24",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "companies",
+      "subtag": "incumbents",
+      "geography": ["Canada", "Global"],
+      "status": "new",
+      "summary": "Cohere and Germany's Aleph Alpha completed a merger to form a combined entity valued at approximately $20 billion, backed by the Schwarz Group with a ~$600 million commitment. The deal creates the first credible transatlantic sovereign-AI challenger to US and Chinese frontier labs. The combined company targets regulated enterprises and government buyers across North America and Europe.",
+      "why_it_matters": "First credible non-US/non-China consolidation in AI; 'sovereign enterprise AI' is now a fundable and scalable category distinct from frontier-lab racing — opens a co-investment thesis for VCs targeting government-adjacent contracts.",
+      "sources": ["src-2026-04-techfundingnews-cohere-aleph"]
+    },
+    {
+      "id": "2026-05-13-notion-agent-platform",
+      "title": "Notion launches developer platform turning its workspace into an AI-agent runtime",
+      "date": "2026-05-13",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "companies",
+      "subtag": "breakouts",
+      "geography": ["US", "Global"],
+      "status": "new",
+      "summary": "Notion opened its workspace to third-party AI agents, external data connectors, and custom code execution, effectively positioning the product as a runtime for autonomous workflows rather than a document tool. The platform includes APIs for reading and writing Notion data, triggering automations, and composing multi-step agent pipelines. Early partners include several enterprise productivity and CRM vendors.",
+      "why_it_matters": "Workspace incumbents racing to become agent orchestration layers raises the distribution bar for horizontal-agent startups — investors should push for domain data moats, not just orchestration primitives.",
+      "sources": ["src-2026-05-13-techcrunch-notion"]
+    },
+    {
+      "id": "2026-05-19-google-io-gemini-spark-agents",
+      "title": "Google IO 2026: Gemini Spark consumer agent and agentic Search go live",
+      "date": "2026-05-19",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "companies",
+      "subtag": "incumbents",
+      "geography": ["US", "Global"],
+      "status": "new",
+      "summary": "At Google IO 2026, Google launched Gemini Spark, a general-purpose consumer agent that reasons across connected apps and third-party services, alongside agentic capabilities in Search that can complete multi-step tasks on behalf of users. The rollout is Google's most direct move into the consumer-agent layer to date. Project Mariner desktop automation was also previewed for enterprise.",
+      "why_it_matters": "Google entering consumer agents expands the kill-zone for AI-assistant startups while simultaneously opening distribution for vertical agents that integrate into the Gemini ecosystem — bifurcates the risk for consumer vs. B2B agent founders.",
+      "sources": ["src-2026-05-19-cnbc-google-io", "src-2026-05-19-google-blog-search"]
+    },
+    {
+      "id": "2026-05-19-gemini-3-1-ultra-flash",
+      "title": "Google releases Gemini 3.1 Ultra with 2M-token context and 3.5 Flash at 1/3 the price",
+      "date": "2026-05-19",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "technology",
+      "subtag": "model-releases",
+      "geography": ["Global"],
+      "status": "new",
+      "summary": "Google released Gemini 3.1 Ultra with native 2 million-token multimodal context across text, image, audio, and video, alongside Gemini 3.5 Flash offering frontier-comparable quality at roughly one-third the cost. Ultra targets deep document analysis and long-horizon agents. Flash accelerates always-on and high-frequency agent use cases that were previously cost-prohibitive.",
+      "why_it_matters": "Price collapse at the Flash tier compresses margins for AI-wrapper startups but unlocks always-on agent categories that were economically infeasible six months ago; 2M context makes long-document workflows a commodity.",
+      "sources": ["src-2026-05-19-cnbc-google-io"]
+    },
+    {
+      "id": "2026-05-01-openai-gpt55-instant-default",
+      "title": "OpenAI makes GPT-5.5 Instant the default model, targeting agentic coding and computer use",
+      "date": "2026-05-01",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "technology",
+      "subtag": "paradigms",
+      "geography": ["Global"],
+      "status": "new",
+      "summary": "OpenAI promoted GPT-5.5 Instant to the default model for ChatGPT and the API, framing it around agentic coding, computer use, knowledge work, and early research. The model is positioned as faster and more cost-efficient than GPT-5 for task-completion workflows. 'Computer use' is now an explicit and marketed use-case category in OpenAI's product positioning.",
+      "why_it_matters": "Browser and desktop automation is now table stakes from the foundation model layer itself — startups whose moat was computer-use automation must move up-stack to domain workflow and proprietary data.",
+      "sources": ["src-2026-05-whatllm-models"]
+    },
+    {
+      "id": "2026-05-14-anthropic-opus-47",
+      "title": "Anthropic releases Opus 4.7 with emphasis on controllability and enterprise safety",
+      "date": "2026-05-14",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "technology",
+      "subtag": "model-releases",
+      "geography": ["US", "Global"],
+      "status": "new",
+      "summary": "Anthropic released Opus 4.7, positioning it as a more literal, more controllable, and lower-risk model compared to earlier Opus versions, targeting enterprise buyers who need predictable, auditable outputs. The release widens Anthropic's differentiation from OpenAI's 'work model' GPT-5.5 framing. Benchmarks show strong performance on instruction-following and refusal precision.",
+      "why_it_matters": "Anthropic is doubling down on enterprise-safe positioning as a durable moat — B2B AI investors should map model-selection rationale to buyer risk profiles, not just benchmark rankings.",
+      "sources": ["src-2026-05-whatllm-models"]
+    },
+    {
+      "id": "2026-03-17-nvidia-rubin-platform",
+      "title": "NVIDIA unveils Rubin AI platform with six new chips and a rack-scale supercomputer",
+      "date": "2026-03-17",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "infrastructure",
+      "subtag": "chips",
+      "geography": ["US", "Global"],
+      "status": "new",
+      "summary": "NVIDIA announced the Rubin GPU platform at GTC 2026, comprising six new chips including Rubin and Rubin Ultra, and a paired NVLink Fusion rack-scale supercomputer designed to extend NVIDIA's lead in AI training and inference. The platform is designed to bridge through 2027. Samples are expected in late 2026 with production volumes in 2027.",
+      "why_it_matters": "Locks in another 18-month NVIDIA compute lead; cloud GPU startups need to secure Rubin allocation now to remain credible alternatives to hyperscalers — access, not specs, is the competitive variable.",
+      "sources": ["src-2026-03-nvidia-rubin"]
+    },
+    {
+      "id": "2026-06-02-intel-crescent-island-gpu",
+      "title": "Intel reveals Crescent Island AI GPU with 480GB LPDDR5X, bypassing HBM supply constraints",
+      "date": "2026-06-02",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "infrastructure",
+      "subtag": "chips",
+      "geography": ["US", "Global"],
+      "status": "new",
+      "summary": "Intel teased the Crescent Island AI data center GPU at Computex 2026, featuring up to 480GB of LPDDR5X memory — an architecture choice that sidesteps the HBM supply bottleneck constraining competing accelerators. The chip targets inference workloads and is expected to sample in H2 2026. Its PCIe form factor enables deployment in existing server infrastructure without costly rack upgrades.",
+      "why_it_matters": "Memory bandwidth, not raw FLOPS, is the actual binding constraint on modern inference — Crescent Island opens a window for non-NVIDIA supply chains and inference-optimized infra startups if hyperscalers adopt at scale.",
+      "sources": ["src-2026-06-datacenterdyn-intel"]
+    },
+    {
+      "id": "2026-05-15-sovereign-compute-canada-india",
+      "title": "Canada commits $240M CAD to Cohere; Microsoft commits $17.5B to India AI and cloud infrastructure",
+      "date": "2026-05-15",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "infrastructure",
+      "subtag": "sovereign-compute",
+      "geography": ["Canada", "India"],
+      "status": "new",
+      "summary": "Canada's federal government finalized a $240 million CAD commitment to Cohere under its $2 billion Sovereign AI Compute Strategy — the first major disbursement and the largest direct government investment in a Canadian AI company. Separately, Microsoft announced a $17.5 billion investment in India AI and cloud infrastructure to be deployed over 2026–2029, its largest-ever Asia commitment. IndiaAI Mission is simultaneously providing subsidized GPU access at ~Rs 150/hour across 34,000 GPUs for domestic startups.",
+      "why_it_matters": "Sovereign-compute capital is now a real and substantial funding alternative to venture for national AI champions — co-investment angles exist for VCs willing to navigate political dependencies and slower decision cycles.",
+      "sources": ["src-2026-05-betakit-cohere-compute", "src-2026-05-abhs-indiaai"]
+    },
+    {
+      "id": "2026-05-01-global-ai-spend-301b",
+      "title": "Global AI spend reaches $301 billion in 2026; 72% of enterprises report production deployments",
+      "date": "2026-05-01",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "adoption",
+      "subtag": "enterprise-spend",
+      "geography": ["Global"],
+      "status": "new",
+      "summary": "Global AI spending is tracking to $301 billion in 2026, up from $223 billion in 2025, with AI software alone representing $157 billion according to Deloitte and IDC data. Seventy-two percent of enterprises surveyed report at least one production AI deployment. Budget owners cite agent automation, code generation, and knowledge retrieval as the top production use cases.",
+      "why_it_matters": "Production deployment percentage crossing the chasm should compress sales cycles for enterprise AI startups and raise the revenue-quality bar at Series B — investors now need to distinguish pilot ARR from retained, scaled ARR.",
+      "sources": ["src-2026-05-deloitte-ai-enterprise"]
+    },
+    {
+      "id": "2026-05-10-enterprise-roi-gap",
+      "title": "97% of executives cite AI benefits but only 29% achieve meaningful org-wide ROI",
+      "date": "2026-05-10",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "adoption",
+      "subtag": "pilots",
+      "geography": ["Global"],
+      "status": "new",
+      "summary": "A May 2026 survey of enterprise AI buyers found that 97% of executives report some AI-driven benefit, but only 29% have achieved meaningful ROI at the organizational scale. Eighty-six percent plan to increase AI budgets in 2026; 74% cite revenue growth as their primary goal while only 20% have achieved it. Change management, data quality, and integration complexity are the top cited blockers.",
+      "why_it_matters": "Pilot purgatory is alive and widening — services-layer, deployment-automation, and outcome-priced agent startups have a large, well-funded market of buyers who have committed to AI but cannot extract value alone.",
+      "sources": ["src-2026-05-writer-enterprise-roi"]
+    },
+    {
+      "id": "2026-05-20-cohere-240m-arr-ipo",
+      "title": "Cohere surpasses $240M ARR and is reportedly preparing for an IPO",
+      "date": "2026-05-20",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "adoption",
+      "subtag": "revenue-benchmarks",
+      "geography": ["Canada"],
+      "status": "new",
+      "summary": "Cohere has surpassed $240 million in annual recurring revenue and is reportedly working with advisors on a potential IPO, which would be the first public offering by a major non-US AI foundation-model company. ARR momentum is driven primarily by enterprise and government sovereign-AI contracts in North America and Europe. A public timeline has not been confirmed.",
+      "why_it_matters": "Cohere would set the first public reference comparable for enterprise-AI platform companies outside the US — its ARR multiple at IPO will recalibrate private valuations for Sarvam, Mistral, and other non-US AI contenders.",
+      "sources": ["src-2026-05-techfundingnews-cohere-ipo"]
+    },
+    {
+      "id": "2026-06-01-us-chip-ban-extraterritorial",
+      "title": "US Commerce extends AI chip export ban to Chinese firms operating outside China",
+      "date": "2026-06-01",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "policy",
+      "subtag": "export-controls",
+      "geography": ["US"],
+      "status": "new",
+      "summary": "The US Commerce Department issued guidance clarifying that advanced AI chip export restrictions apply to Chinese-owned or Chinese-controlled entities regardless of their physical location, closing the Singapore and Malaysia routing workaround that had allowed some Chinese AI firms to access restricted Hopper/Blackwell-class hardware. The guidance takes effect immediately, with legal review processes available for affected entities.",
+      "why_it_matters": "Directly kills compute-arbitrage plays routing through Southeast Asian subsidiaries; founders with any Chinese-capital structure or Chinese cloud partnerships must review hardware sourcing and corporate structure immediately.",
+      "sources": ["src-2026-06-01-aljazeera-chip-ban"]
+    },
+    {
+      "id": "2026-05-20-eu-ai-export-controls-draft",
+      "title": "EU circulates draft AI export controls covering GPU chips, model weights, and AI cloud services",
+      "date": "2026-05-20",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "policy",
+      "subtag": "export-controls",
+      "geography": ["Global"],
+      "status": "new",
+      "summary": "The European Commission is circulating a draft regulation that would add AI hardware above a ~300 TFLOPS threshold, trained model weights, and AI cloud services to its list of 'hyper-critical items' requiring export licenses for sales to certain third countries. The proposal marks the first time AI model weights would be treated as a controlled technology under EU export law. Industry groups are pushing back on the weights classification as unworkable.",
+      "why_it_matters": "If model weights become controlled goods, open-weight AI companies in Europe face new compliance infrastructure costs and geographic licensing constraints — license-management tooling and legal-entity structuring become fundable categories.",
+      "sources": ["src-2026-05-aicerts-eu-controls"]
+    },
+    {
+      "id": "2026-05-15-india-ai-regulation-mission",
+      "title": "India accelerates IndiaAI Mission GPU subsidies and establishes AI regulatory task force",
+      "date": "2026-05-15",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "policy",
+      "subtag": "gov-strategy",
+      "geography": ["India"],
+      "status": "new",
+      "summary": "India's IndiaAI Mission is providing subsidized GPU compute at approximately Rs 150/GPU-hour across a pool of 34,000 GPUs available to domestic AI startups through a competitive application process. The government has established an AI regulatory task force focused on ethics and legal frameworks, signaling a preference for industrial-policy support over restrictive regulation. Data-protection obligations under India's DPDP framework continue to be clarified for AI training data use.",
+      "why_it_matters": "India's industrial-policy-first approach lowers compliance burden relative to the EU, making India favorable as a development and deployment market; the compute subsidy meaningfully reduces the barrier for founders without hyperscaler access.",
+      "sources": ["src-2026-05-abhs-indiaai", "src-2026-05-mindfoundry-india-regs"]
+    },
+    {
+      "id": "2026-05-14-thinking-machines-lab-exodus",
+      "title": "One-third of Thinking Machines Lab founding team exits to Meta, OpenAI, and xAI",
+      "date": "2026-05-14",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "talent",
+      "subtag": "key-hires",
+      "geography": ["US"],
+      "status": "new",
+      "summary": "Approximately one-third of the founding team at Thinking Machines Lab, an agentic-AI startup with a multi-billion-dollar valuation, departed within a short window — five founders to Meta (one reportedly offered a $1.5 billion package), five to OpenAI, and one to xAI. Co-founder Barret Zoph was reportedly fired and subsequently rejoined OpenAI. Departures hit pre-training, product, and research functions.",
+      "why_it_matters": "Even at multi-billion valuations, cash-rich Big Tech can out-bid startups for founding talent — investors must price retention risk explicitly and negotiate golden-handcuff structures at term sheet, not post-close.",
+      "sources": ["src-2026-05-14-americanbazaar-tm", "src-2026-05-14-thenextweb-meta"]
+    },
+    {
+      "id": "2026-05-15-spacexai-50-researcher-exodus",
+      "title": "50+ researchers depart SpaceXAI post-xAI absorption amid burnout and targeted talent raids",
+      "date": "2026-05-15",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "talent",
+      "subtag": "founder-moves",
+      "geography": ["US"],
+      "status": "new",
+      "summary": "More than 50 AI researchers left SpaceXAI following its absorption into xAI, with departures hitting teams working on Grok coding, world models, voice, and pre-training infrastructure. Culture clashes, burnout, and aggressive recruiting by Meta and Thinking Machines Lab were cited. Some departures were targeted hires; others were voluntary exits driven by mission-drift concerns.",
+      "why_it_matters": "A 50+ researcher dispersion from a single organization is a leading indicator of new company formation — expect a wave of seed-stage startups from xAI alumni in world models and voice over the next 6–9 months.",
+      "sources": ["src-2026-05-15-techstartups-xai-exodus"]
+    },
+    {
+      "id": "2026-05-20-lab-retention-benchmarks",
+      "title": "Anthropic leads lab retention at 80%; OpenAI falls to 67% amid board and executive turmoil",
+      "date": "2026-05-20",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "talent",
+      "subtag": "key-hires",
+      "geography": ["US"],
+      "status": "new",
+      "summary": "Aggregated job-change data shows Anthropic at 80% retention, DeepMind at 78%, and OpenAI at 67%. OpenAI's lower figure follows a turbulent period including a reported board coup, the departure of its CTO, a safety-team exodus, and three executive exits in April 2026 alone. Anthropic attributes its higher retention to cultural alignment and equity structure.",
+      "why_it_matters": "Anthropic's retention edge is a quantifiable moat embedded in its Series H valuation — for investors benchmarking AI infrastructure bets, researcher continuity is a competitive signal worth tracking alongside capability rankings.",
+      "sources": ["src-2026-05-jobsbyculture-openai"]
+    },
+    {
+      "id": "2026-05-20-moat-not-the-model",
+      "title": "Thesis: the defensible moat in AI is product, distribution, and workflow lock-in — not the model",
+      "date": "2026-05-20",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "theses",
+      "subtag": "thesis",
+      "geography": ["Global"],
+      "status": "new",
+      "summary": "A widely circulated Andreessen Horowitz and Foundation Capital position holds that as AI models commoditize and prices fall, durable defensibility will reside in product design, go-to-market distribution, proprietary training data, and workflow integration — not model access. The thesis is supported by emerging data showing that application-layer companies with high switching costs are retaining customers and expanding revenue even as base model quality converges across providers.",
+      "why_it_matters": "This is the load-bearing question for portfolio construction: investors need exclusive data, network effects, or workflow lock-in as proof points — a benchmark advantage without those will not survive the next price cycle.",
+      "sources": ["src-2026-05-aicorner-andreessen-moat"]
+    },
+    {
+      "id": "2026-05-15-services-as-software-pricing",
+      "title": "Debate: outcome-based and services-as-software pricing challenge traditional SaaS ARR",
+      "date": "2026-05-15",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "theses",
+      "subtag": "debate",
+      "geography": ["Global"],
+      "status": "new",
+      "summary": "As AI agents take on work previously done by human service contractors, venture investors are pushing portfolio companies toward hybrid pricing — a base subscription plus usage fees tied to measurable outcomes — rather than pure per-seat SaaS models. Early movers in legal, accounting, and customer support are experimenting with cost-per-task and outcome-per-outcome billing. The model compresses gross margin on deployment-heavy workflows but dramatically expands total addressable market.",
+      "why_it_matters": "Standard ARR-per-seat diligence frameworks are inadequate for outcome-priced AI companies — investors need new metrics: gross margin on agent-hours, outcome-attribution proofs, and retention curves that don't assume seat-based churn.",
+      "sources": ["src-2026-05-vccorner-outcome-pricing"]
+    },
+    {
+      "id": "2026-05-21-consumer-agent-adoption-question",
+      "title": "Watching: Google's Gemini Spark bets consumer agents will go mainstream — analysts are skeptical",
+      "date": "2026-05-21",
+      "added": "2026-06-03T12:00:00Z",
+      "section": "theses",
+      "subtag": "watching",
+      "geography": ["Global"],
+      "status": "new",
+      "summary": "Following Google IO, analysts are questioning whether consumer-facing agents like Gemini Spark will achieve meaningful adoption, noting that user behavior change — not raw AI capability — remains the gating factor. TechCrunch framed Google's consumer-agent pitch as a hard sell, pointing to low day-7 retention for assistant-style AI products outside task-specific workflows. Enterprise AI by contrast shows consistently higher retention where buyer mandates adoption.",
+      "why_it_matters": "Bearish on consumer AI startups dependent on voluntary behavior change; strongly bullish on B2B vertical agents where procurement mandates use — near-term capital should continue flowing to enterprise-first builders.",
+      "sources": ["src-2026-05-21-techcrunch-consumer-agents"]
+    }
+  ]
+}
+</script>
+
+<script>
+const GEO_COLOR = { US: 'var(--us)', Canada: 'var(--canada)', India: 'var(--india)', Global: 'var(--global)' };
+const GEO_FLAG  = { US: '🇺🇸', Canada: '🇨🇦', India: '🇮🇳', Global: '🌐' };
+const GEO_FILL  = { US: 'fill-us', Canada: 'fill-canada', India: 'fill-india', Global: 'fill-us' };
+const SEC_COLOR = {
+  capital: 'var(--c-capital)', companies: 'var(--c-companies)',
+  technology: 'var(--c-technology)', infrastructure: 'var(--c-infrastructure)',
+  adoption: 'var(--c-adoption)', policy: 'var(--c-policy)',
+  talent: 'var(--c-talent)', theses: 'var(--c-theses)'
+};
+
+const state = { view: 'week', q: '', geos: new Set(), statuses: new Set(), country: 'US', countrySec: null };
+let TAX, SRC, ENT, SRCMAP;
+
+function readEmbedded(id) {
+  try { return JSON.parse(document.getElementById(id).textContent); } catch(e) { return null; }
+}
+
+async function load() {
+  async function grab(path, embId) {
+    try { const r = await fetch(path, { cache: 'no-store' }); if (r.ok) return await r.json(); } catch(e) {}
+    return readEmbedded(embId);
+  }
+  TAX = await grab('./data/taxonomy.json', 'embedded-taxonomy');
+  SRC = await grab('./data/sources.json',  'embedded-sources');
+  ENT = await grab('./data/entries.json',  'embedded-entries');
+  SRCMAP = {}; (SRC.sources || []).forEach(s => SRCMAP[s.id] = s);
+  ENT.entries = (ENT.entries || []).sort((a, b) =>
+    (b.date || '').localeCompare(a.date || '') || (b.added || '').localeCompare(a.added || ''));
+  buildChrome(); render();
+}
+
+function refDate() {
+  const m = ENT.entries.reduce((x, e) => e.added && e.added > x ? e.added : x, '');
+  return m ? new Date(m) : new Date();
+}
+function inWeek(e) {
+  const ref = refDate(), win = new Date(ref.getTime() - 7 * 864e5);
+  return e.added && new Date(e.added) >= win;
+}
+function fmtRange() {
+  const ref = refDate(), win = new Date(ref.getTime() - 7 * 864e5);
+  const f = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  return f(win) + ' – ' + f(ref) + ', ' + ref.getFullYear();
+}
+function nextRefresh() {
+  const d = new Date(); const day = d.getDay(); const add = ((8 - day) % 7) || 7;
+  const n = new Date(d.getTime() + add * 864e5);
+  return n.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+}
+
+function secById(id) { return TAX.sections.find(s => s.id === id); }
+function clusterSections(cid) { return TAX.sections.filter(s => s.cluster === cid); }
+
+function passes(e) {
+  if (state.geos.size && !e.geography.some(g => state.geos.has(g))) return false;
+  if (state.statuses.size && !state.statuses.has(e.status)) return false;
+  if (state.q) {
+    const t = (e.title + ' ' + e.summary + ' ' + e.why_it_matters).toLowerCase();
+    if (!state.q.toLowerCase().split(/\s+/).every(w => t.includes(w))) return false;
+  }
+  return true;
+}
+function filtered() { return ENT.entries.filter(passes); }
+
+/* ── chrome ── */
+function buildChrome() {
+  const wk = ENT.entries.filter(inWeek).length;
+  const all = ENT.entries.length;
+  const srcs = (SRC.sources || []).length;
+  const secs = TAX.sections.length;
+
+  // stats strip
+  document.getElementById('statsstrip').innerHTML = [
+    [wk,  'this week'],
+    [all, 'total entries'],
+    [srcs,'sources'],
+    [secs,'sections'],
+    [3,   'markets'],
+  ].map(([n, l]) =>
+    `<div class="stat-item"><span class="stat-n">${n}</span><span class="stat-label">${l}</span></div>`
+  ).join('');
+
+  // tabs
+  const tabs = [
+    ['week',     'This week', wk],
+    ['sections', 'Sections',  all],
+    ['countries','Countries', null],
+    ['sources',  'Sources',   srcs],
+    ['about',    'About',     null],
+  ];
+  document.getElementById('tabs').innerHTML = tabs.map(([id, lab, ct]) =>
+    `<button data-v="${id}" aria-current="${state.view === id}">${lab}${ct != null ? `<span class="ct">${ct}</span>` : ''}</button>`
+  ).join('');
+  document.querySelectorAll('#tabs button').forEach(b => b.onclick = () => {
+    state.view = b.dataset.v; buildChrome(); render(); window.scrollTo(0, 0);
+  });
+
+  // live badge
+  document.getElementById('asof').innerHTML =
+    `<b>LIVE</b> · as of ${refDate().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}<br>next refresh · ${nextRefresh()}`;
+
+  // geo chips
+  document.getElementById('geochips').innerHTML =
+    `<span class="filterlabel">Geo</span>` +
+    TAX.geographies.map(g =>
+      `<button class="chip" data-g="${g}" aria-pressed="${state.geos.has(g)}" aria-label="Filter by ${g}">
+        <span class="geodot" style="background:${GEO_COLOR[g]}"></span>${g}
+      </button>`
+    ).join('');
+  document.querySelectorAll('#geochips .chip').forEach(c => c.onclick = () => {
+    const g = c.dataset.g; state.geos.has(g) ? state.geos.delete(g) : state.geos.add(g);
+    buildChrome(); render();
+  });
+
+  // status chips
+  document.getElementById('statuschips').innerHTML =
+    `<span class="filterlabel">Status</span>` +
+    TAX.statuses.map(s =>
+      `<button class="chip" data-s="${s}" aria-pressed="${state.statuses.has(s)}" aria-label="Filter by ${s}">${s}</button>`
+    ).join('');
+  document.querySelectorAll('#statuschips .chip').forEach(c => c.onclick = () => {
+    const s = c.dataset.s; state.statuses.has(s) ? state.statuses.delete(s) : state.statuses.add(s);
+    buildChrome(); render();
+  });
+
+  // sample banner
+  const nSample = ENT.entries.filter(e => e.sample).length;
+  document.getElementById('banner').innerHTML = nSample
+    ? `<div class="banner">◆ &nbsp;<span><b>Sample data.</b> ${nSample} of ${ENT.entries.length} entries are illustrative placeholders. They are replaced automatically when the weekly pipeline runs, or edit <b>data/entries.json</b> directly.</span></div>`
+    : '';
+
+  // footer stats
+  document.getElementById('foot-stats').innerHTML =
+    `The AI Brief By Shaurya Gulati · structured AI-market intelligence<br>${all} entries · ${srcs} sources · ${secs} sections`;
+}
+
+document.getElementById('q').addEventListener('input', e => { state.q = e.target.value; render(); });
+
+/* ── entry card ── */
+function entryHTML(e) {
+  const sec  = secById(e.section);
+  const col  = SEC_COLOR[e.section] || 'var(--border)';
+  const geos = e.geography.map(g =>
+    `<span class="geo"><span class="geodot" style="background:${GEO_COLOR[g]}"></span>${g}</span>`
+  ).join('');
+  const srcs = (e.sources || []).map(id => {
+    const s = SRCMAP[id]; if (!s) return '';
+    const inner = `<span class="stype">${s.type}</span>${s.publisher || s.title}`;
+    const href  = s.url && s.url !== '#' ? s.url : null;
+    return href
+      ? `<a class="src" href="${href}" target="_blank" rel="noopener">${inner} ↗</a>`
+      : `<span class="src">${inner}</span>`;
+  }).join('');
+
+  return `<article class="entry" data-section="${e.section}">
+    <div class="entry-top">
+      <span class="e-date">${e.date}</span>
+      <span class="e-sec" style="border-color:${col};color:${col}">${sec ? sec.label : e.section}${e.subtag ? ' · ' + e.subtag.replace(/-/g, ' ') : ''}</span>
+      ${geos}
+      <span class="status ${e.status}">${e.status}</span>
+    </div>
+    <h4>${e.title}</h4>
+    <p class="summary">${e.summary}</p>
+    <div class="why"><span class="lbl">Why it matters</span><p>${e.why_it_matters}</p></div>
+    ${srcs ? `<div class="srcs"><span class="slbl">Source</span>${srcs}</div>` : ''}
+  </article>`;
+}
+
+function feed(list) {
+  return list.length
+    ? `<div class="feed">${list.map(entryHTML).join('')}</div>`
+    : `<div class="empty">No entries match the current filters.</div>`;
+}
+
+/* ── views ── */
+function viewWeek() {
+  const list = filtered().filter(inWeek);
+  let html = `<p class="lede">The week's signal across the AI economy, filed by type and tagged by market. Window: ${fmtRange()}.</p>`;
+  TAX.clusters.forEach(cl => {
+    const secs = clusterSections(cl.id);
+    const clEntries = secs.flatMap(s => list.filter(e => e.section === s.id));
+    if (!clEntries.length) return;
+    html += `<div class="cluster-head">
+      <span class="cl-badge">${cl.id}</span>
+      <span class="cl-label">${cl.label}</span>
+      <span class="cl-blurb">${cl.blurb}</span>
+    </div>`;
+    secs.forEach(s => {
+      const es = list.filter(e => e.section === s.id); if (!es.length) return;
+      const col = SEC_COLOR[s.id] || 'var(--text-3)';
+      html += `<div class="sec-head">
+        <div class="sec-head-left">
+          <span class="sec-dot" style="color:${col};background:${col}"></span>
+          <h3>${s.label}</h3>
+        </div>
+        <span class="sec-meta">${es.length} this week · ${s.cadence}</span>
+      </div>`;
+      html += feed(es);
+    });
+  });
+  if (!list.length) html += `<div class="empty">No entries in this window match the current filters.</div>`;
+  return html;
+}
+
+function viewSections() {
+  const list = filtered();
+  let html = `<p class="lede">Every fact lives in exactly one section, chosen by its type — a round is a transaction, a startup is an entity, a chip is an asset. Cross-referenced, never duplicated.</p>`;
+  TAX.clusters.forEach(cl => {
+    html += `<div class="cluster-head">
+      <span class="cl-badge">${cl.id}</span>
+      <span class="cl-label">${cl.label}</span>
+      <span class="cl-blurb">${cl.blurb}</span>
+    </div>`;
+    clusterSections(cl.id).forEach(s => {
+      const es = list.filter(e => e.section === s.id);
+      const col = SEC_COLOR[s.id] || 'var(--text-3)';
+      html += `<div class="sec-head">
+        <div class="sec-head-left">
+          <span class="sec-dot" style="color:${col};background:${col}"></span>
+          <h3>${s.label}</h3>
+        </div>
+        <span class="sec-meta">${es.length} ${es.length === 1 ? 'entry' : 'entries'} · ${s.cadence}</span>
+      </div>`;
+      html += `<p class="sec-blurb">${s.blurb}</p>`;
+      html += feed(es);
+    });
+  });
+  return html;
+}
+
+function viewCountries() {
+  const list = filtered();
+  let html = `<p class="lede">The same entries, pivoted by market. Geography is an overlay on the thematic sections — not a separate silo — so the three desks stay comparable.</p>`;
+  html += `<div class="ctry-grid">`;
+  ['US', 'Canada', 'India'].forEach(g => {
+    const es  = list.filter(e => e.geography.includes(g));
+    const max = Math.max(1, ...TAX.sections.map(s => es.filter(e => e.section === s.id).length));
+    const bars = TAX.sections.map(s => {
+      const n   = es.filter(e => e.section === s.id).length;
+      const pct = Math.round(n / max * 100);
+      return `<div class="bar" data-g="${g}" data-s="${s.id}" aria-label="${s.label}: ${n} entries">
+        <span class="bar-label">${s.label}</span>
+        <span class="bar-track"><span class="bar-fill ${GEO_FILL[g]}" style="width:${pct}%"></span></span>
+        <span class="bar-n">${n}</span>
+      </div>`;
+    }).join('');
+    const active = state.country === g ? 'border-color:var(--border-2)' : '';
+    html += `<div class="ctry-card" style="${active}">
+      <div class="ctry-card-header">
+        <h3><span class="ctry-flag">${GEO_FLAG[g]}</span>${g}</h3>
+        <span class="cc-count">${es.length} ${es.length === 1 ? 'entry' : 'entries'}</span>
+      </div>
+      <div class="bars">${bars}</div>
+    </div>`;
+  });
+  html += `</div>`;
+
+  const sel = state.country || 'US';
+  let ces = list.filter(e => e.geography.includes(sel));
+  const secLabel = state.countrySec ? ` · ${(secById(state.countrySec) || { label: state.countrySec }).label}` : '';
+  html += `<div class="ctry-feed-head">
+    <h3>${GEO_FLAG[sel]} ${sel} feed${secLabel}</h3>
+    <span class="meta">click a bar to filter by section</span>
+  </div>`;
+  if (state.countrySec) ces = ces.filter(e => e.section === state.countrySec);
+  html += feed(ces);
+  return html;
+}
+
+function viewSources() {
+  const list = ENT.entries;
+  let rows = '';
+  (SRC.sources || []).slice().sort((a, b) => (b.date || '').localeCompare(a.date || '')).forEach(s => {
+    const cited = list.filter(e => (e.sources || []).includes(s.id)).length;
+    const href  = s.url && s.url !== '#'
+      ? `<a href="${s.url}" target="_blank" rel="noopener">open ↗</a>` : '—';
+    rows += `<tr>
+      <td>${s.title}</td>
+      <td style="color:var(--text-3)">${s.publisher || '—'}</td>
+      <td><span class="pubtype">${s.type}</span></td>
+      <td style="font-family:var(--mono);font-size:11px;color:var(--text-3)">${s.date || '—'}</td>
+      <td style="font-family:var(--mono);font-size:11px;text-align:center">${cited}</td>
+      <td>${href}</td>
+    </tr>`;
+  });
+  return `<p class="lede">The source registry: every primary document stored once and referenced by entries. One canonical link, cited everywhere — so readers can always reach the parent report.</p>
+    <div class="srcreg-wrap">
+      <table class="srcreg">
+        <thead><tr>
+          <th>Document</th><th>Publisher</th><th>Type</th><th>Date</th><th>Cited</th><th>Link</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
+
+function viewAbout() {
+  return `<div class="about">
+    <p class="lede" style="margin-top:20px">
+      A live, structured intelligence brief on the AI economy across the United States, Canada, and India —
+      built for venture investors who need the signal, not the feed.
+    </p>
+    <h3>How it's organized</h3>
+    <p>Eight content sections across four clusters: <b>the stack</b> (what's being built), <b>the market</b> (players & money), <b>the environment</b> (rules & people), and <b>synthesis</b> (the so-what). The organizing rule: every fact is filed by its <em>type</em> and cross-linked rather than duplicated. A funding round is a transaction (Capital); the startup that raised it is an entity (Companies); the chip it builds is an asset (Infrastructure).</p>
+    <p>Geography is a cross-cutting <em>overlay</em>, not three silos. Every entry is tagged US / Canada / India / Global, and the Countries view pivots the same dataset so the three desks stay comparable.</p>
+    <h3>Every entry carries</h3>
+    <p>A date, geography tags, a section and sub-tag, a 2–3 sentence summary, a <code>why it matters</code> line written for an investor, one or more links into the source registry, and a status of <code>new</code>, <code>updated</code>, or <code>stale</code>.</p>
+    <h3>How it stays live</h3>
+    <p>A scheduled job runs every Monday. It uses Claude with web search to research the week's developments across all eight sections and three markets, drafts entries in the atomic schema, and opens a pull request for review before anything publishes.</p>
+    <div class="pipe-steps">
+      <div class="step"><span class="step-num">1</span><span class="step-body"><b>Schedule</b> — GitHub Actions cron fires weekly.</span></div>
+      <div class="step"><span class="step-num">2</span><span class="step-body"><b>Research</b> — Claude (Anthropic API + web search) drafts entries per section, with real source URLs.</span></div>
+      <div class="step"><span class="step-num">3</span><span class="step-body"><b>Validate</b> — entries are schema-checked, deduped, and aged; a PR is opened for review.</span></div>
+      <div class="step"><span class="step-num">4</span><span class="step-body"><b>Publish</b> — merging rebuilds this static site automatically.</span></div>
+    </div>
+    <p>Cadence is tuned per section: Capital and Technology refresh daily-to-weekly, Policy is event-driven, Theses is monthly.</p>
+  </div>`;
+}
+
+function render() {
+  const m = document.getElementById('main');
+  const v = { week: viewWeek, sections: viewSections, countries: viewCountries, sources: viewSources, about: viewAbout }[state.view];
+  m.innerHTML = v();
+  if (state.view === 'countries') {
+    m.querySelectorAll('.bar').forEach(b => b.onclick = () => {
+      const g = b.dataset.g, s = b.dataset.s;
+      state.country = g;
+      state.countrySec = (state.country === g && state.countrySec === s) ? null : s;
+      render();
+    });
+  }
+}
+
+load();
+</script>
+</body>
+</html>
