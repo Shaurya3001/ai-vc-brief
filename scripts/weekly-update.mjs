@@ -22,7 +22,7 @@ const API_KEY = process.env.ANTHROPIC_API_KEY;
 const MODEL = process.env.CLAUDE_MODEL || "claude-sonnet-4-6";
 // Web search is a server-side tool. Confirm the current version string at
 // https://docs.claude.com — bump this if the API has moved on.
-const WEB_SEARCH_TOOL = { type: "web_search_20250305", name: "web_search", max_uses: 6 };
+const WEB_SEARCH_TOOL = { type: "web_search_20260209", name: "web_search", max_uses: 6 };
 const MARKETS = ["United States", "Canada", "India"];
 const STALE_AFTER_DAYS = 21;          // entries older than this get marked "stale"
 const MAX_ENTRIES_PER_SECTION = 4;    // keep the weekly brief tight
