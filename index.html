@@ -1453,8 +1453,17 @@ function fmtRange() {
   return f(win) + ' – ' + f(now) + ', ' + now.getFullYear();
 }
 function nextRefresh() {
-  const n = new Date(new Date().getTime() + 864e5);
-  return n.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  const now = new Date();
+  const next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 6, 0, 0));
+  if (now >= next) next.setUTCDate(next.getUTCDate() + 1);
+  return next;
+}
+function fmtCountdown() {
+  const diff = Math.max(0, nextRefresh() - Date.now());
+  const h = Math.floor(diff / 36e5);
+  const m = Math.floor((diff % 36e5) / 6e4);
+  const s = Math.floor((diff % 6e4) / 1e3);
+  return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
 }
 
 function secById(id) { return TAX.sections.find(s => s.id === id); }
@@ -1501,9 +1510,17 @@ function buildChrome() {
     state.view = b.dataset.v; buildChrome(); render(); window.scrollTo(0, 0);
   });
 
-  // live badge
-  document.getElementById('asof').innerHTML =
-    `<b>LIVE</b> · as of ${refDate().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}<br>next refresh · ${nextRefresh()}`;
+  // live badge + countdown
+  const asofEl = document.getElementById('asof');
+  const asofDate = refDate().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  function tickBadge() {
+    asofEl.innerHTML = `<b>LIVE</b> · as of ${asofDate}<br>next refresh · <span id="countdown">${fmtCountdown()}</span> UTC`;
+  }
+  tickBadge();
+  setInterval(() => {
+    const el = document.getElementById('countdown');
+    if (el) el.textContent = fmtCountdown();
+  }, 1000);
 
   // geo chips
   document.getElementById('geochips').innerHTML =
