@@ -1032,13 +1032,13 @@ function refDate() {
   return m ? new Date(m) : new Date();
 }
 function inWeek(e) {
-  const ref = refDate(), win = new Date(ref.getTime() - 7 * 864e5);
-  return e.added && new Date(e.added) >= win;
+  const win = new Date(new Date().getTime() - 30 * 864e5);
+  return e.date && new Date(e.date) >= win;
 }
 function fmtRange() {
-  const ref = refDate(), win = new Date(ref.getTime() - 7 * 864e5);
+  const now = new Date(), win = new Date(now.getTime() - 30 * 864e5);
   const f = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-  return f(win) + ' – ' + f(ref) + ', ' + ref.getFullYear();
+  return f(win) + ' – ' + f(now) + ', ' + now.getFullYear();
 }
 function nextRefresh() {
   const n = new Date(new Date().getTime() + 864e5);
@@ -1079,7 +1079,7 @@ function buildChrome() {
 
   // tabs
   const tabs = [
-    ['week',     'This week', wk],
+    ['week',     'Recent', wk],
     ['sections', 'Sections',  all],
     ['countries','Countries', null],
     ['sources',  'Sources',   srcs],
@@ -1172,7 +1172,7 @@ function feed(list) {
 /* ── views ── */
 function viewWeek() {
   const list = filtered().filter(inWeek);
-  let html = `<p class="lede">The week's signal across the AI economy, filed by type and tagged by market. Window: ${fmtRange()}.</p>`;
+  let html = `<p class="lede">The latest developments across the AI economy, filed by type and tagged by market. Covering ${fmtRange()}.</p>`;
   TAX.clusters.forEach(cl => {
     const secs = clusterSections(cl.id);
     const clEntries = secs.flatMap(s => list.filter(e => e.section === s.id));
