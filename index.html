@@ -1040,8 +1040,7 @@ function fmtRange() {
   return f(win) + ' – ' + f(ref) + ', ' + ref.getFullYear();
 }
 function nextRefresh() {
-  const d = new Date(); const day = d.getDay(); const add = ((8 - day) % 7) || 7;
-  const n = new Date(d.getTime() + add * 864e5);
+  const n = new Date(new Date().getTime() + 864e5);
   return n.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
 }
 
