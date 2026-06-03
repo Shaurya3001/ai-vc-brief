@@ -1514,7 +1514,7 @@ function buildChrome() {
   const asofEl = document.getElementById('asof');
   const asofDate = refDate().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   function tickBadge() {
-    asofEl.innerHTML = `<b>LIVE</b> · as of ${asofDate}<br>next refresh · <span id="countdown">${fmtCountdown()}</span> UTC`;
+    asofEl.innerHTML = `<b>LIVE</b> · as of ${asofDate}<br>next refresh · <span id="countdown">${fmtCountdown()}</span>`;
   }
   tickBadge();
   setInterval(() => {
