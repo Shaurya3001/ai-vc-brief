@@ -476,6 +476,53 @@
   @media (max-width: 480px) {
     .sec-blurb { display: none; }
   }
+
+  /* ── SECTION JUMP NAV ── */
+  .sec-jump {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 14px 0 8px;
+  }
+  .sec-jump-pill {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    border: 1px solid var(--border); background: var(--surface); color: var(--text-3);
+    padding: 4px 11px; border-radius: 20px; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 5px;
+    text-decoration: none; transition: all 0.15s ease;
+  }
+  .sec-jump-pill:hover { border-color: var(--border-2); color: var(--text-2); }
+  .sec-jump-pill .sjdot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+  .sec-jump-pill .sjct {
+    font-family: var(--mono); font-size: 9px; color: var(--text-3);
+    background: var(--card); border: 1px solid var(--border);
+    padding: 1px 5px; border-radius: 8px;
+  }
+
+  /* ── COLLAPSE CONTROLS ── */
+  .sec-controls {
+    display: flex; justify-content: flex-end; margin-bottom: 2px;
+  }
+  .sec-controls button {
+    appearance: none; background: none; border: none; cursor: pointer;
+    font-family: var(--sans); font-size: 11px; color: var(--text-3);
+    padding: 4px 0; transition: color 0.15s; text-decoration: underline;
+    text-decoration-color: transparent; text-underline-offset: 2px;
+  }
+  .sec-controls button:hover { color: var(--text-2); text-decoration-color: var(--border-2); }
+
+  /* ── SECTION HEADING TOGGLE ── */
+  .sec-head-btn {
+    appearance: none; background: none; border: none; cursor: pointer;
+    display: flex; align-items: center; gap: 10px; width: 100%;
+    text-align: left; padding: 0; color: inherit;
+  }
+  .sec-head-btn .chevron {
+    margin-left: auto; color: var(--text-3); flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+  .sec-head-btn[aria-expanded="false"] .chevron { transform: rotate(-90deg); }
+
+  /* ── COLLAPSIBLE PANEL ── */
+  .sec-panel.collapsed { display: none; }
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -1165,6 +1212,17 @@ function feed(list) {
 }
 
 /* ── views ── */
+/* ── collapse state (persisted per-section) ── */
+const COLLAPSED_KEY = 'aibrief:sections:v1';
+function loadCollapsed() {
+  try { return new Set(JSON.parse(localStorage.getItem(COLLAPSED_KEY) || '[]')); }
+  catch { return new Set(); }
+}
+function saveCollapsed(set) {
+  try { localStorage.setItem(COLLAPSED_KEY, JSON.stringify([...set])); } catch {}
+}
+let secCollapsed = loadCollapsed();
+
 function viewWeek() {
   const list = filtered().filter(inWeek);
   // Build 5-bullet digest from the 5 newest entries' why_it_matters lines
@@ -1208,7 +1266,29 @@ function viewWeek() {
 
 function viewSections() {
   const list = filtered();
-  let html = `<p class="lede">Every fact lives in exactly one section, chosen by its type — a round is a transaction, a startup is an entity, a chip is an asset. Cross-referenced, never duplicated.</p>`;
+  const allSecIds = TAX.sections.map(s => s.id);
+  const anyOpen = allSecIds.some(id => !secCollapsed.has(id));
+
+  // jump-nav pills
+  let jumpNav = `<div class="sec-jump">`;
+  TAX.sections.forEach(s => {
+    const n = list.filter(e => e.section === s.id).length;
+    const col = SEC_COLOR[s.id] || 'var(--text-3)';
+    jumpNav += `<a class="sec-jump-pill" href="#sec-${s.id}" data-sec="${s.id}" aria-label="Jump to ${s.label}">
+      <span class="sjdot" style="background:${col}"></span>${s.label}<span class="sjct">${n}</span>
+    </a>`;
+  });
+  jumpNav += `</div>`;
+
+  const collapseAllBtn = `<div class="sec-controls">
+    <button id="sec-collapse-all" aria-label="${anyOpen ? 'Collapse all sections' : 'Expand all sections'}">
+      ${anyOpen ? 'Collapse all' : 'Expand all'}
+    </button>
+  </div>`;
+
+  let html = `<p class="lede">Every fact lives in exactly one section, chosen by its type — a round is a transaction, a startup is an entity, a chip is an asset. Cross-referenced, never duplicated.</p>
+  ${jumpNav}${collapseAllBtn}`;
+
   TAX.clusters.forEach(cl => {
     html += `<div class="cluster-head">
       <span class="cl-badge">${cl.id}</span>
@@ -1218,15 +1298,24 @@ function viewSections() {
     clusterSections(cl.id).forEach(s => {
       const es = list.filter(e => e.section === s.id);
       const col = SEC_COLOR[s.id] || 'var(--text-3)';
-      html += `<div class="sec-head">
-        <div class="sec-head-left">
-          <span class="sec-dot" style="color:${col};background:${col}"></span>
-          <h3>${s.label}</h3>
+      const collapsed = secCollapsed.has(s.id);
+      const expanded = !collapsed;
+      html += `<div id="sec-${s.id}" style="scroll-margin-top:180px;">
+        <div class="sec-head">
+          <button class="sec-head-btn" data-sec="${s.id}" aria-expanded="${expanded}" aria-controls="panel-${s.id}">
+            <div class="sec-head-left">
+              <span class="sec-dot" style="color:${col};background:${col}"></span>
+              <h3>${s.label}</h3>
+            </div>
+            <span class="sec-meta">${es.length} ${es.length === 1 ? 'entry' : 'entries'} · ${s.cadence}</span>
+            <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
         </div>
-        <span class="sec-meta">${es.length} ${es.length === 1 ? 'entry' : 'entries'} · ${s.cadence}</span>
+        <div class="sec-panel${collapsed ? ' collapsed' : ''}" id="panel-${s.id}" role="region" aria-labelledby="sec-${s.id}">
+          <p class="sec-blurb">${s.blurb}</p>
+          ${feed(es)}
+        </div>
       </div>`;
-      html += `<p class="sec-blurb">${s.blurb}</p>`;
-      html += feed(es);
     });
   });
   return html;
@@ -1325,12 +1414,61 @@ function render() {
   const m = document.getElementById('main');
   const v = { week: viewWeek, sections: viewSections, countries: viewCountries, sources: viewSources, about: viewAbout }[state.view];
   m.innerHTML = v();
+
   if (state.view === 'countries') {
     m.querySelectorAll('.bar').forEach(b => b.onclick = () => {
       const g = b.dataset.g, s = b.dataset.s;
       state.country = g;
       state.countrySec = (state.country === g && state.countrySec === s) ? null : s;
       render();
+    });
+  }
+
+  if (state.view === 'sections') {
+    // section toggle buttons
+    m.querySelectorAll('.sec-head-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const sid = btn.dataset.sec;
+        const panel = document.getElementById('panel-' + sid);
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isExpanded));
+        panel.classList.toggle('collapsed', isExpanded);
+        if (isExpanded) secCollapsed.add(sid); else secCollapsed.delete(sid);
+        saveCollapsed(secCollapsed);
+        // update collapse-all button text
+        const allIds = TAX.sections.map(s => s.id);
+        const stillAnyOpen = allIds.some(id => !secCollapsed.has(id));
+        const cab = document.getElementById('sec-collapse-all');
+        if (cab) { cab.textContent = stillAnyOpen ? 'Collapse all' : 'Expand all'; }
+      });
+    });
+
+    // collapse all / expand all
+    document.getElementById('sec-collapse-all')?.addEventListener('click', () => {
+      const allIds = TAX.sections.map(s => s.id);
+      const anyOpen = allIds.some(id => !secCollapsed.has(id));
+      if (anyOpen) { allIds.forEach(id => secCollapsed.add(id)); }
+      else { secCollapsed.clear(); }
+      saveCollapsed(secCollapsed);
+      render();
+    });
+
+    // jump-nav: expand if collapsed, then scroll
+    m.querySelectorAll('.sec-jump-pill').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const sid = a.dataset.sec;
+        if (secCollapsed.has(sid)) {
+          secCollapsed.delete(sid);
+          saveCollapsed(secCollapsed);
+          render();
+          requestAnimationFrame(() => {
+            document.getElementById('sec-' + sid)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        } else {
+          document.getElementById('sec-' + sid)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     });
   }
 }
