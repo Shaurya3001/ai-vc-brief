@@ -1510,17 +1510,13 @@ function buildChrome() {
     state.view = b.dataset.v; buildChrome(); render(); window.scrollTo(0, 0);
   });
 
-  // live badge + countdown
+  // live badge — recomputes asofDate from current data each call
   const asofEl = document.getElementById('asof');
-  const asofDate = refDate().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
   function tickBadge() {
+    const asofDate = refDate().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     asofEl.innerHTML = `<b>LIVE</b> · as of ${asofDate}<br>next refresh · <span id="countdown">${fmtCountdown()}</span>`;
   }
   tickBadge();
-  setInterval(() => {
-    const el = document.getElementById('countdown');
-    if (el) el.textContent = fmtCountdown();
-  }, 1000);
 
   // geo chips
   document.getElementById('geochips').innerHTML =
@@ -1859,7 +1855,26 @@ function render() {
   }
 }
 
-load();
+load().then(() => {
+  // countdown ticks every second — single interval, outside buildChrome
+  setInterval(() => {
+    const el = document.getElementById('countdown');
+    if (el) el.textContent = fmtCountdown();
+  }, 1000);
+
+  // re-fetch entries every 5 min so "as of" date and content stay live
+  setInterval(async () => {
+    try {
+      const r = await fetch('./data/entries.json', { cache: 'no-store' });
+      if (!r.ok) return;
+      const fresh = await r.json();
+      ENT = fresh;
+      ENT.entries = (ENT.entries || []).sort((a, b) =>
+        (b.date || '').localeCompare(a.date || '') || (b.added || '').localeCompare(a.added || ''));
+      buildChrome(); render();
+    } catch(e) {}
+  }, 5 * 60 * 1000);
+});
 
 // Reading progress bar
 (function() {
