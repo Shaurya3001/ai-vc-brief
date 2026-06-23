@@ -1,6 +1,285 @@
 {
   "sources": [
     {
+      "id": "src-2026-06-18-techcrunch-ferc-grid",
+      "title": "AI data centers just got a government-mandated fast lane to the grid",
+      "publisher": "TechCrunch",
+      "type": "press",
+      "date": "2026-06-18",
+      "url": "https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-16-bcg-ai-talent-mobility",
+      "title": "Global Mobility of Highly Skilled Talent Falls Nearly 12% as Competition for AI Expertise Intensifies",
+      "publisher": "BCG",
+      "type": "research",
+      "date": "2026-06-16",
+      "url": "https://www.bcg.com/press/16june2026-global-mobility-skilled-talent-competition-ai-expertise",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-13-fortune-fable5-export-ban",
+      "title": "Anthropic disables Fable and Mythos AI models following U.S. government export ban",
+      "publisher": "Fortune",
+      "type": "press",
+      "date": "2026-06-13",
+      "url": "https://fortune.com/2026/06/13/anthropic-disables-fable-mythos-export-controls-national-security-threat/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-12-anthropic-fable5-suspension",
+      "title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5",
+      "publisher": "Anthropic",
+      "type": "blog",
+      "date": "2026-06-12",
+      "url": "https://www.anthropic.com/news/fable-mythos-access",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-12-releasebot-openai-june",
+      "title": "OpenAI Release Notes - June 2026",
+      "publisher": "Releasebot",
+      "type": "analysis",
+      "date": "2026-06-12",
+      "url": "https://releasebot.io/updates/openai",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-12-marketingprofs-ai-coding-economics",
+      "title": "AI Update, June 12, 2026: AI News and Views From the Past Week",
+      "publisher": "MarketingProfs",
+      "type": "blog",
+      "date": "2026-06-12",
+      "url": "https://www.marketingprofs.com/opinions/2026/54994/ai-update-june-12-2026-ai-news-and-views-from-the-past-week",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-11-tcs-anthropic-partnership",
+      "title": "TCS and Anthropic launch Global Premier Partnership to drive Enterprise AI scaling",
+      "publisher": "TCS",
+      "type": "press",
+      "date": "2026-06-11",
+      "url": "https://www.tcs.com/who-we-are/newsroom/press-release/tcs-anthropic-launch-global-premier-partnership-drive-enterprise-ai-scaling",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-11-bloomberg-manus-meta",
+      "title": "Meta Starts Unwinding Manus Deal by Splitting Operations, Data",
+      "publisher": "Bloomberg",
+      "type": "press",
+      "date": "2026-06-11",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-11/meta-severs-manus-data-access-after-china-orders-buyout-unwound",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-10-tradingkey-ai-ipo-bubble",
+      "title": "Wall Street Debates 2026 SpaceX, OpenAI and Anthropic IPOs, Will the AI Bubble Burst?",
+      "publisher": "TradingKey",
+      "type": "analysis",
+      "date": "2026-06-10",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261938698-spacex-openai-anthropic-ipo-valuation-ai-infrastructure-bubble-risk-liquidity-lockup-expiry-profitability-tradingkey",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-10-visa-openai-partnership",
+      "title": "Visa Partners with OpenAI to Power the Next Generation of AI Commerce",
+      "publisher": "Visa",
+      "type": "press",
+      "date": "2026-06-10",
+      "url": "https://investor.visa.com/news/news-details/2026/Visa-Partners-with-OpenAI-to-Power-the-Next-Generation-of-AI-Commerce/default.aspx",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-10-techcrunch-meta-reliance",
+      "title": "Meta signs first AI data center deal in India with Reliance",
+      "publisher": "TechCrunch",
+      "type": "press",
+      "date": "2026-06-10",
+      "url": "https://techcrunch.com/2026/06/10/meta-signs-first-ai-data-center-deal-in-india-with-reliance/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-10-bloomberg-sarvam-ai",
+      "title": "India's Sarvam AI Set to Raise Up to $350 Million in New Funding",
+      "publisher": "Bloomberg",
+      "type": "press",
+      "date": "2026-06-10",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-10/india-ai-startup-sarvam-raises-funds-at-1-5-billion-valuation",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-10-lawfare-ai-immigration",
+      "title": "Trump's Immigration Policies Overlook AI Talent",
+      "publisher": "Lawfare",
+      "type": "analysis",
+      "date": "2026-06-10",
+      "url": "https://www.lawfaremedia.org/article/trump-s-immigration-policies-overlook-ai-talent",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-09-microsoft-kpmg-agent365",
+      "title": "KPMG and Microsoft scale trusted, enterprise AI agents globally through deployment of Agent 365 and Copilot",
+      "publisher": "Microsoft",
+      "type": "press",
+      "date": "2026-06-09",
+      "url": "https://news.microsoft.com/source/2026/06/09/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally-through-deployment-of-agent-365-and-copilot/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-09-techcrunch-fable5",
+      "title": "Anthropic's Claude Fable 5 is a version of Mythos the public can access today",
+      "publisher": "TechCrunch",
+      "type": "press",
+      "date": "2026-06-09",
+      "url": "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-09-anthropic-fable5-announcement",
+      "title": "Claude Fable 5 and Claude Mythos 5",
+      "publisher": "Anthropic",
+      "type": "blog",
+      "date": "2026-06-09",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-09-geekwire-gehrke-uber",
+      "title": "Tech Moves: Microsoft AI leader departs for Uber",
+      "publisher": "GeekWire",
+      "type": "press",
+      "date": "2026-06-09",
+      "url": "https://www.geekwire.com/2026/tech-moves-expedia-names-svp-microsoft-ai-leader-departs-for-uber-zeroavia-ceo-steps-down/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-08-quartz-apple-siri-gemini",
+      "title": "Apple is overhauling Siri with Google's Gemini AI",
+      "publisher": "Quartz",
+      "type": "press",
+      "date": "2026-06-08",
+      "url": "https://qz.com/apple-siri-ai-google-gemini-wwdc-2026-060826",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-05-medium-ai-revenue-benchmarks",
+      "title": "The $530 Billion AI Question: Which Big Tech Stock is Winning?",
+      "publisher": "Medium / Beth Kindig",
+      "type": "analysis",
+      "date": "2026-06-05",
+      "url": "https://beth-kindig.medium.com/the-530-billion-ai-question-which-big-tech-stock-is-winning-c556d729bcda",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-05-crunchbase-cognition-arr",
+      "title": "The Week's 10 Biggest Funding Rounds: Megarounds Proliferate, Led By Enterprise Software, AI, And Space Tech",
+      "publisher": "Crunchbase News",
+      "type": "data",
+      "date": "2026-06-05",
+      "url": "https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-05-whitehouse-ai-eo",
+      "title": "Promoting Advanced Artificial Intelligence Innovation and Security",
+      "publisher": "The White House",
+      "type": "gov",
+      "date": "2026-06-05",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-04-pm-canada-ai-all",
+      "title": "Prime Minister Carney launches AI for All: Canada's new national artificial intelligence strategy",
+      "publisher": "Prime Minister of Canada",
+      "type": "gov",
+      "date": "2026-06-04",
+      "url": "https://www.pm.gc.ca/en/news/news-releases/2026/06/04/prime-minister-carney-launches-ai-all-canadas-new-national-artificial",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-04-betakit-canada-ai-strategy",
+      "title": "Canada's AI strategy contains $2.3 billion in spending but few details on new privacy regulations",
+      "publisher": "BetaKit",
+      "type": "analysis",
+      "date": "2026-06-04",
+      "url": "https://betakit.com/canadas-ai-strategy-contains-2-3-billion-in-spending-few-details-on-new-privacy-regulations/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-04-bloomberg-canada-ai-strategy",
+      "title": "Canada to Provide Funding, Buy Equity Stakes in AI Startups",
+      "publisher": "Bloomberg",
+      "type": "press",
+      "date": "2026-06-04",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-04/canada-to-provide-funding-buy-equity-stakes-in-ai-startups",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-03-alphasense-press",
+      "title": "AlphaSense Raises $350M at $7.5B Valuation, and Surpasses $600M in Annual Recurring Revenue",
+      "publisher": "AlphaSense",
+      "type": "press",
+      "date": "2026-06-03",
+      "url": "https://www.alpha-sense.com/press/alphasense-raises-350m-at-7-5b-valuation-and-surpasses-600m-in-annual-recurring-revenue/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-02-futurum-intel-xeon6",
+      "title": "Intel Xeon 6+ Targets Agentic AI Density With 288 E-Cores on Intel 18A",
+      "publisher": "Futurum Group",
+      "type": "analysis",
+      "date": "2026-06-02",
+      "url": "https://futurumgroup.com/insights/intel-xeon-6-targets-agentic-ai-density-with-288-e-cores-on-intel-18a/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-01-theregister-intel-xeon6",
+      "title": "Intel launches 288-core Clearwater Forest Xeon 6 on 18A process",
+      "publisher": "The Register",
+      "type": "press",
+      "date": "2026-06-01",
+      "url": "https://www.theregister.com/systems/2026/06/01/intel-launches-288-core-clearwater-forest-xeon-6-on-18a-process/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-01-ised-canada-scip",
+      "title": "AI Sovereign Compute Infrastructure Program",
+      "publisher": "Innovation, Science and Economic Development Canada",
+      "type": "gov",
+      "date": "2026-06-01",
+      "url": "https://ised-isde.canada.ca/site/ised/en/ai-sovereign-compute-infrastructure-program",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-06-01-eetimes-indiaai-gpus",
+      "title": "India to Add 20,000 GPUs as AI Mission 2.0 Expands",
+      "publisher": "EE Times",
+      "type": "press",
+      "date": "2026-06-01",
+      "url": "https://www.eetimes.com/india-to-add-20000-gpus-as-ai-mission-2-0-expands-compute-and-chip-push/",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-05-20-latteheq-ai-infra-thesis",
+      "title": "The 2026 AI Infrastructure Playbook: Why the Real Gains are 'Beyond the Chip'",
+      "publisher": "The Latte HQ",
+      "type": "analysis",
+      "date": "2026-05-20",
+      "url": "https://www.thelattehq.com/p/the-2026-ai-infrastructure-playbook-why-the-real-gains-are-beyond-the-chip",
+      "archive_url": ""
+    },
+    {
+      "id": "src-2026-05-19-techcrunch-gemini-omni",
+      "title": "Google's Gemini Omni turns images, audio, and text into video — and that's just the start",
+      "publisher": "TechCrunch",
+      "type": "press",
+      "date": "2026-05-19",
+      "url": "https://techcrunch.com/2026/05/19/googles-gemini-omni-turns-images-audio-and-text-into-video-and-thats-just-the-start/",
+      "archive_url": ""
+    },
+    {
       "id": "src-2026-05-28-crunchbase-ai-rounds",
       "title": "Biggest AI Funding Rounds – Anthropic, Cognition and More",
       "publisher": "Crunchbase News",
@@ -223,24 +502,6 @@
       "type": "press",
       "date": "2026-05-21",
       "url": "https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/",
-      "archive_url": ""
-    },
-    {
-      "id": "src-2026-06-theneuron-newsletter",
-      "title": "The Neuron – Daily AI Newsletter",
-      "publisher": "The Neuron",
-      "type": "analysis",
-      "date": "2026-06-03",
-      "url": "https://www.theneuron.ai/newsletter/",
-      "archive_url": ""
-    },
-    {
-      "id": "src-2026-06-alphasignal-newsletter",
-      "title": "AlphaSignal – Technical AI Updates for Developers",
-      "publisher": "Alpha Signal",
-      "type": "analysis",
-      "date": "2026-06-03",
-      "url": "https://alphasignal.ai/",
       "archive_url": ""
     }
   ]
