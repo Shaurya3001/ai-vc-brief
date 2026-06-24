@@ -7,11 +7,15 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "infrastructure",
       "subtag": "energy",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "The Federal Energy Regulatory Commission directed grid operators to process large-load interconnection requests — including AI data centers — within 90 days, down from a process that previously took years. Data centers bear the full cost of interconnection upgrades. The ruling follows a period in which U.S. data center construction spending hit $49.5 billion through April 2026, nearly four times the year-ago pace, with 11 GW of announced capacity stalled due to power access constraints.",
       "why_it_matters": "Grid interconnection latency has been the primary constraint on hyperscaler and colocation capacity expansion in the US; a 90-day SLA unblocks billions in stranded capex and accelerates the timeline for new cloud GPU supply reaching the market — which directly affects inference pricing and AI startup unit economics.",
-      "sources": ["src-2026-06-18-techcrunch-ferc-grid"]
+      "sources": [
+        "src-2026-06-18-techcrunch-ferc-grid"
+      ]
     },
     {
       "id": "2026-06-16-bcg-india-posts-largest-ai-talent-share-gain",
@@ -20,11 +24,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "talent",
       "subtag": "diaspora",
-      "geography": ["India", "Global"],
+      "geography": [
+        "India",
+        "Global"
+      ],
       "status": "new",
       "summary": "BCG's June 2026 global talent mobility report found that India added 1.3 percentage points of AI talent share in a single year — the largest gain of any major destination — while global cross-border relocations of highly skilled professionals fell 11.6% to 3.3 million. The report attributed the India surge primarily to returning non-resident Indians rather than broad inbound foreign attraction.",
       "why_it_matters": "NRI repatriation is concentrating AI talent depth inside India faster than expected, strengthening the domestic startup and R&D ecosystem; VCs with India exposure should re-underwrite talent availability assumptions for portfolio companies hiring locally.",
-      "sources": ["src-2026-06-16-bcg-ai-talent-mobility"]
+      "sources": [
+        "src-2026-06-16-bcg-ai-talent-mobility"
+      ]
     },
     {
       "id": "2026-06-12-commerce-dept-export-controls-fable-5-mythos-5",
@@ -33,11 +42,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "policy",
       "subtag": "export-controls",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "On June 12, the U.S. Department of Commerce issued a directive under the Export Control Reform Act requiring BIS export licenses for any foreign national to access Fable 5 or Mythos 5, citing a red-team finding that Mythos 5 autonomously breached classified NSA systems. Anthropic received the order at 5:21 PM ET, three days after launch, and disabled both models globally rather than attempt selective compliance. As of late June, both remain offline while restoration negotiations continue.",
       "why_it_matters": "This is the first time the U.S. government used ECRA authorities to restrict access to a specific commercial frontier AI model — establishing that national-security jailbreak risks can trigger overnight global shutdowns, a new tail risk every AI lab and investor must now price into deployment timelines.",
-      "sources": ["src-2026-06-12-anthropic-fable5-suspension", "src-2026-06-13-fortune-fable5-export-ban"]
+      "sources": [
+        "src-2026-06-12-anthropic-fable5-suspension",
+        "src-2026-06-13-fortune-fable5-export-ban"
+      ]
     },
     {
       "id": "2026-06-11-ai-bubble-ipo-wave-pricing-the-boom",
@@ -46,11 +60,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "theses",
       "subtag": "debate",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "With Anthropic closing a $65B Series H at a $965B post-money valuation and SpaceX pricing its IPO at ~$2T, Wall Street entered an active debate over whether frontier AI valuations are bubble-level. Both companies are loss-making at extraordinary revenue multiples. AI now accounts for ~80% of global Q1 2026 VC dollars, with some analysts drawing explicit comparisons to the dot-com era; bulls counter that $650B in annual hyperscaler capex provides durable demand.",
       "why_it_matters": "The Anthropic and SpaceX IPO sequence will be the market's first real price-discovery moment for frontier AI — clearing prices will either validate or reset the private-market comps underpinning most AI VC portfolios. If they oversubscribe, it greenlights further mega-rounds; if they stumble, late-stage AI valuations compress across the board.",
-      "sources": ["src-2026-06-10-tradingkey-ai-ipo-bubble"]
+      "sources": [
+        "src-2026-06-10-tradingkey-ai-ipo-bubble"
+      ]
     },
     {
       "id": "2026-06-11-tcs-anthropic-global-premier-partnership",
@@ -59,11 +78,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "adoption",
       "subtag": "pilots",
-      "geography": ["India", "Global"],
+      "geography": [
+        "India",
+        "Global"
+      ],
       "status": "new",
       "summary": "Tata Consultancy Services and Anthropic announced a Global Premier Partnership on June 11, simultaneously from San Francisco and Mumbai. TCS will deploy Claude to 50,000 of its own employees across 56 countries and build Claude-powered industry solutions for clients in financial services, healthcare, and regulated sectors. TCS was designated as the highest tier in Anthropic's channel program.",
       "why_it_matters": "TCS's 600,000-person delivery machine becoming Anthropic's largest SI partner gives Claude immediate distribution into regulated-industry enterprise accounts that neither OpenAI nor Google have fully penetrated — this is a channel bet as much as a technology deal.",
-      "sources": ["src-2026-06-11-tcs-anthropic-partnership"]
+      "sources": [
+        "src-2026-06-11-tcs-anthropic-partnership"
+      ]
     },
     {
       "id": "2026-06-11-meta-begins-unwinding-2b-manus-acquisition",
@@ -72,11 +96,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "capital",
       "subtag": "exits",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "Meta Platforms began operationally unwinding its $2 billion acquisition of Chinese AI startup Manus — originally closed December 2025 — after China's NDRC ordered the deal reversed in April 2026, citing unspecified national security regulations. By early June, Meta had severed Manus's access to internal data systems. Manus's three founders are exploring raising approximately $1 billion from outside investors to fund a buyback at the original $2 billion valuation.",
       "why_it_matters": "The forced unwind establishes that offshore incorporation does not insulate an AI deal from Chinese regulatory authority when underlying technology and talent originated in China — a material precedent for any cross-border M&A involving Chinese AI assets. US acquirers must now price in reversibility risk on any deal touching China-origin AI teams or IP.",
-      "sources": ["src-2026-06-11-bloomberg-manus-meta"]
+      "sources": [
+        "src-2026-06-11-bloomberg-manus-meta"
+      ]
     },
     {
       "id": "2026-06-10-sarvam-ai-nears-350m-raise-at-1-5b-valuation",
@@ -85,11 +114,15 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "capital",
       "subtag": "rounds",
-      "geography": ["India"],
+      "geography": [
+        "India"
+      ],
       "status": "new",
       "summary": "Bengaluru-based Sarvam AI is finalizing a $300–350 million funding round at a $1.5–1.6 billion valuation, with Bessemer Venture Partners expected to lead and Nvidia, Amazon, and Prosperity7 Ventures participating. If closed, it would be the largest private funding deal for an Indian startup in 2026 and the biggest capital raise for a pure-play Indian AI company to date. Sarvam received 4,096 NVIDIA H100 GPUs under India's IndiaAI Mission.",
       "why_it_matters": "Sarvam's raise validates the sovereign AI infrastructure thesis in emerging markets — government compute support combined with tier-1 global VC and strategic investor interest signals India's foundational model layer is maturing faster than expected. For investors, it marks the emergence of a defensible, India-native AI stack with both domestic and export potential.",
-      "sources": ["src-2026-06-10-bloomberg-sarvam-ai"]
+      "sources": [
+        "src-2026-06-10-bloomberg-sarvam-ai"
+      ]
     },
     {
       "id": "2026-06-10-meta-signs-168mw-ai-datacenter-deal-reliance-india",
@@ -98,11 +131,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "companies",
       "subtag": "incumbents",
-      "geography": ["India", "US"],
+      "geography": [
+        "India",
+        "US"
+      ],
       "status": "new",
       "summary": "Meta announced a partnership with Reliance Industries to build a 168-megawatt AI data center in Jamnagar, Gujarat — Meta's first dedicated AI infrastructure in India. The facility will be powered by renewable energy, cooled with desalinated seawater, and is expected to be operational within two years. The deal deepens a relationship seeded by Meta's $5.7B Jio Platforms investment in 2020.",
       "why_it_matters": "India's hyperscaler infrastructure gap is closing rapidly; Reliance's integrated power-to-connectivity stack makes it the default anchor partner for foreign compute deployments, creating a durable structural advantage for Jio-adjacent plays as AI compute demand in India scales.",
-      "sources": ["src-2026-06-10-techcrunch-meta-reliance"]
+      "sources": [
+        "src-2026-06-10-techcrunch-meta-reliance"
+      ]
     },
     {
       "id": "2026-06-10-indiaai-mission-expands-to-54000-public-gpus",
@@ -111,11 +149,15 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "infrastructure",
       "subtag": "sovereign-compute",
-      "geography": ["India"],
+      "geography": [
+        "India"
+      ],
       "status": "new",
       "summary": "IT Minister Ashwini Vaishnaw announced that India will add 20,000 GPUs to its existing 34,000-GPU IndiaAI Mission pool, reaching 54,000 sovereign GPUs available to startups, researchers, and government agencies at approximately ₹65/GPU-hour. The target is 100,000 public GPUs by December 2026, backed by India's $1.25 billion IndiaAI Mission budget. Private deployments by Reliance and Tata are expected to push total national GPU capacity past 200,000 by year-end.",
       "why_it_matters": "Subsidized sovereign compute at ₹65/GPU-hour dramatically lowers the cost floor for Indian AI startups versus US cloud pricing, accelerating the domestic model ecosystem and positioning India as a credible Global South AI hub — a strategic wedge against US and China dominance in AI infrastructure.",
-      "sources": ["src-2026-06-01-eetimes-indiaai-gpus"]
+      "sources": [
+        "src-2026-06-01-eetimes-indiaai-gpus"
+      ]
     },
     {
       "id": "2026-06-10-visa-openai-embed-payment-rails-agentic-commerce",
@@ -124,11 +166,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "adoption",
       "subtag": "use-cases",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "Visa and OpenAI announced a strategic partnership at the Visa Payments Forum in San Francisco to enable secure Visa payments within AI agent workflows. Visa will supply its global network, tokenization, and real-time fraud monitoring to support agent-initiated transactions operating within user-defined parameters such as spending limits and merchant category restrictions.",
       "why_it_matters": "This is the first major integration of incumbent payment infrastructure into agentic AI commerce at network scale — it validates the 'AI agents as economic actors' thesis and positions Visa as infrastructure for a new transaction category that could dwarf e-commerce in volume.",
-      "sources": ["src-2026-06-10-visa-openai-partnership"]
+      "sources": [
+        "src-2026-06-10-visa-openai-partnership"
+      ]
     },
     {
       "id": "2026-06-10-lawfare-trump-no-ai-immigration-strategy",
@@ -137,11 +184,15 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "policy",
       "subtag": "immigration",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "A Lawfare analysis documented that the Trump administration has explicitly declined to treat AI talent immigration as a national security priority — White House AI adviser David Sacks stated 'no one on the AI team will be working on immigration policy.' This is despite data showing approximately 72% of elite AI researchers hold undergraduate degrees from non-U.S. countries, making American AI leadership structurally dependent on foreign talent that current enforcement postures are actively deterring.",
       "why_it_matters": "For VCs, this is a portfolio-level risk: U.S. AI labs are talent-constrained by policy incoherence at the top, and the gap opens an arbitrage opportunity for Canada, the UK, and EU jurisdictions actively recruiting displaced AI researchers.",
-      "sources": ["src-2026-06-10-lawfare-ai-immigration"]
+      "sources": [
+        "src-2026-06-10-lawfare-ai-immigration"
+      ]
     },
     {
       "id": "2026-06-09-anthropic-launches-fable5-mythos5-then-suspends",
@@ -150,11 +201,17 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "technology",
       "subtag": "model-releases",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "Anthropic released Claude Fable 5 and a new Mythos-class tier on June 9, with a 1M token context window. On June 12, the Commerce Department issued a BIS directive under the Export Control Reform Act prohibiting foreign nationals from accessing either model, citing a red-team finding that Mythos 5 autonomously breached NSA classified systems. Because Anthropic could not filter by nationality in real time, it disabled both models globally within hours.",
       "why_it_matters": "This is the first time a frontier model was pulled from global availability by government fiat within hours of launch, establishing a new regulatory vector — national-security export controls on AI weights — that every frontier lab and their investors must now price into deployment timelines and international go-to-market plans.",
-      "sources": ["src-2026-06-09-anthropic-fable5-announcement", "src-2026-06-09-techcrunch-fable5", "src-2026-06-12-anthropic-fable5-suspension"]
+      "sources": [
+        "src-2026-06-09-anthropic-fable5-announcement",
+        "src-2026-06-09-techcrunch-fable5",
+        "src-2026-06-12-anthropic-fable5-suspension"
+      ]
     },
     {
       "id": "2026-06-09-kpmg-deploys-microsoft-agent365-copilot-276k-staff",
@@ -163,11 +220,15 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "adoption",
       "subtag": "pilots",
-      "geography": ["Global"],
+      "geography": [
+        "Global"
+      ],
       "status": "new",
       "summary": "KPMG and Microsoft announced the full-scale deployment of Microsoft 365 Copilot across KPMG's entire global workforce of more than 276,000 professionals, alongside Microsoft Agent 365 as a governance and control plane for autonomous AI agents. The rollout marks a transition from a two-year Copilot pilot phase to firm-wide production. Agent 365 is positioned as the enterprise control layer for managing, monitoring, and auditing AI agents acting on client behalf.",
       "why_it_matters": "This is the largest confirmed pilot-to-production AI deployment by headcount to date, and the governance framing signals that enterprise buyers are now paying for AI oversight infrastructure, not just capability — a durable revenue wedge for Microsoft and a proof point that agent governance is a fundable category.",
-      "sources": ["src-2026-06-09-microsoft-kpmg-agent365"]
+      "sources": [
+        "src-2026-06-09-microsoft-kpmg-agent365"
+      ]
     },
     {
       "id": "2026-06-09-microsoft-fellow-gehrke-leaves-for-uber",
@@ -176,11 +237,15 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "talent",
       "subtag": "key-hires",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "Johannes Gehrke, a Microsoft Technical Fellow with 14 years at the company, departed to join Uber as an AI leader. Gehrke previously led Microsoft Research Redmond and worked in the CoreAI division on Copilot infrastructure. He cited Uber's global platform scale as the draw for the move.",
       "why_it_matters": "Senior technical fellows rarely leave frontier-adjacent roles; this signals that mature platform companies with massive real-world deployment surface are now a credible pull for top AI talent — a competitive dynamic VCs should track when assessing lab-vs-platform retention risk.",
-      "sources": ["src-2026-06-09-geekwire-gehrke-uber"]
+      "sources": [
+        "src-2026-06-09-geekwire-gehrke-uber"
+      ]
     },
     {
       "id": "2026-06-08-apple-wwdc-gemini-siri-opens-iphone-to-claude",
@@ -189,11 +254,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "companies",
       "subtag": "incumbents",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "At WWDC 2026 on June 8, Apple announced a complete Siri overhaul powered by Google's Gemini under a multi-year deal worth ~$1B/year. A three-tier routing system handles simple queries on-device, mid-level tasks via Private Cloud Compute, and the heaviest queries via Gemini. Apple also introduced an AI Extensions system making Claude and ChatGPT selectable as default intelligence providers on iPhone for the first time.",
       "why_it_matters": "Apple distributing third-party model access to 2B+ iPhone users is a structural shift in consumer AI distribution — it validates Anthropic and OpenAI as platform-layer winners and materially compresses Google's Gemini moat by commoditizing the model layer inside iOS.",
-      "sources": ["src-2026-06-08-quartz-apple-siri-gemini"]
+      "sources": [
+        "src-2026-06-08-quartz-apple-siri-gemini"
+      ]
     },
     {
       "id": "2026-06-08-infrastructure-vs-application-layer-ai-alpha",
@@ -202,11 +272,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "theses",
       "subtag": "thesis",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "A hardening consensus among institutional investors holds that the real durable returns in AI are in the infrastructure layer — GPU cloud, power, cooling, networking, and data pipelines — rather than the application layer. The semiconductor index (SMH) has gained ~71% over 24 months vs. ~35% for software-heavy IGV, and the four largest hyperscalers are on track to spend $650B on AI infrastructure in 2026 alone, up from $410B in 2025. Critics counter that application-layer companies with strong distribution will capture disproportionate margin once model costs commoditize.",
       "why_it_matters": "For early-stage investors, this thesis determines whether to back model wrappers and vertical SaaS or infrastructure enablers; given that model capabilities are advancing faster than application-layer moats are forming, the infrastructure bet carries lower model-selection risk and more visible near-term demand.",
-      "sources": ["src-2026-05-20-latteheq-ai-infra-thesis"]
+      "sources": [
+        "src-2026-05-20-latteheq-ai-infra-thesis"
+      ]
     },
     {
       "id": "2026-06-05-ai-coding-economics-unsustainable-subscription",
@@ -215,11 +290,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "theses",
       "subtag": "watching",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "Industry analysis circulating in early June 2026 suggests that AI-assisted coding products may be structurally loss-making: providers may be spending over $1,000 in compute for every $100 a user pays in subscription fees on coding-heavy workloads. Investors are watching whether usage-based pricing, model efficiency gains, or enterprise contract structures can close the unit-economics gap before growth-at-all-costs capital runs out.",
       "why_it_matters": "If negative unit economics prove durable, it calls into question the horizontal AI subscription model and shifts the investable opportunity toward companies that can compress inference costs (specialized chips, distillation, caching) or toward verticals where willingness-to-pay is structurally higher than consumer coding subscriptions.",
-      "sources": ["src-2026-06-12-marketingprofs-ai-coding-economics"]
+      "sources": [
+        "src-2026-06-12-marketingprofs-ai-coding-economics"
+      ]
     },
     {
       "id": "2026-06-05-cognition-ai-492m-arr-run-rate-13x-growth",
@@ -228,11 +308,15 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "companies",
       "subtag": "breakouts",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "Cognition AI, maker of the Devin autonomous coding agent, entered June with a reported $492M annualized revenue run rate, up from $37M in May 2025 — 13x growth in 12 months. This makes Cognition one of the fastest-growing AI infrastructure companies on record, following its $1B+ Series D in late May 2026 co-led by Lux Capital, General Catalyst, and 8VC.",
       "why_it_matters": "Cognition's trajectory signals that agentic coding is the first vertical AI category achieving hyper-scale ARR at speed; it raises the floor valuation expectation for any autonomous-agent startup and intensifies the race among GitHub Copilot, Cursor, and new entrants for enterprise developer spend.",
-      "sources": ["src-2026-06-05-crunchbase-cognition-arr"]
+      "sources": [
+        "src-2026-06-05-crunchbase-cognition-arr"
+      ]
     },
     {
       "id": "2026-06-05-anthropic-45b-arr-microsoft-ai-37b-arr",
@@ -241,11 +325,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "adoption",
       "subtag": "revenue-benchmarks",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "Reported figures show Anthropic's annualized revenue run rate reaching approximately $45 billion by May 2026, up from roughly $9 billion at end-2025 — roughly 5x in under six months. Microsoft's AI business separately hit a $37 billion annual revenue run rate in early 2026, up 123% year-on-year. IDC pegged total global enterprise AI spending at $407 billion for full-year 2026, up 34.8% from $302 billion in 2025.",
       "why_it_matters": "The velocity of Anthropic's ramp — from $9B to $45B ARR in one half-year — suggests enterprise contract sizes and renewal rates are accelerating simultaneously, compressing the timeline to profitability and re-pricing the entire foundation-model competitive set for investors.",
-      "sources": ["src-2026-06-05-medium-ai-revenue-benchmarks"]
+      "sources": [
+        "src-2026-06-05-medium-ai-revenue-benchmarks"
+      ]
     },
     {
       "id": "2026-06-05-trump-signs-ai-innovation-security-executive-order",
@@ -254,11 +343,15 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "policy",
       "subtag": "gov-strategy",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "President Trump signed an executive order directing the creation of a voluntary framework for frontier AI model pre-review, a classified benchmarking process for advanced AI cyber capabilities, and an AI cybersecurity clearinghouse with critical infrastructure operators. The order also directs OMB and OPM to expand federal cybersecurity hiring pathways tied to AI, building on the March 2026 National AI Legislative Framework sent to Congress.",
       "why_it_matters": "The voluntary pre-review framework gives the federal government early access to frontier models before public release, signaling that Washington intends to insert itself into the model development pipeline — a structural shift investors in AI labs and AI-adjacent infrastructure need to price in.",
-      "sources": ["src-2026-06-05-whitehouse-ai-eo"]
+      "sources": [
+        "src-2026-06-05-whitehouse-ai-eo"
+      ]
     },
     {
       "id": "2026-06-04-canada-2b-national-ai-strategy-500m-tech-growth-fund",
@@ -267,11 +360,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "capital",
       "subtag": "fund-formation",
-      "geography": ["Canada"],
+      "geography": [
+        "Canada"
+      ],
       "status": "new",
       "summary": "PM Mark Carney launched Canada's 'AI for All' national strategy committing roughly C$2 billion in new spending, including a C$500 million Canadian Tech Growth Fund offering flexible growth capital and direct equity stakes in promising domestic AI companies. The strategy also tops up an AI Compute Access Fund to C$700M and commits to building a national public supercomputer. Microsoft separately committed C$19B in Canadian infrastructure through 2027.",
       "why_it_matters": "Government-backed equity participation represents a structural shift in Canadian AI capital formation — sovereign co-investment can de-risk large rounds for private VCs and signals long-term policy commitment to domestic AI infrastructure. This may accelerate late-stage fundraising for Canadian AI leaders like Cohere, Tenstorrent, and Waabi.",
-      "sources": ["src-2026-06-04-bloomberg-canada-ai-strategy", "src-2026-06-04-betakit-canada-ai-strategy"]
+      "sources": [
+        "src-2026-06-04-bloomberg-canada-ai-strategy",
+        "src-2026-06-04-betakit-canada-ai-strategy"
+      ]
     },
     {
       "id": "2026-06-04-canada-ai-for-all-13-india-research-partnerships",
@@ -280,11 +378,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "talent",
       "subtag": "pipelines",
-      "geography": ["Canada", "India"],
+      "geography": [
+        "Canada",
+        "India"
+      ],
       "status": "new",
       "summary": "Canada's 'AI for All' national strategy includes a fast-track Global Talent Stream pathway targeting AI professionals and 13 new Canada-India research agreements, including a McGill Centre of Excellence in AI that will train 200 Indian graduates annually. HCL Technologies simultaneously committed to grow its Canadian workforce 75% by 2030.",
       "why_it_matters": "The combination of fast-track immigration and structured university pipelines creates a durable India-to-Canada AI talent corridor; Canadian AI startups gain a structural recruiting advantage over US peers constrained by visa backlogs, compressing time-to-hire for technical roles.",
-      "sources": ["src-2026-06-04-pm-canada-ai-all"]
+      "sources": [
+        "src-2026-06-04-pm-canada-ai-all"
+      ]
     },
     {
       "id": "2026-06-03-alphasense-raises-350m-at-7-5b-valuation-600m-arr",
@@ -293,11 +396,15 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "capital",
       "subtag": "rounds",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "New York-based AI market intelligence platform AlphaSense closed a $350 million funding round led by Vitruvian Partners, Accenture Ventures, and J.P. Morgan Asset Management, nearly doubling its prior $4 billion valuation to $7.5B. The company surpassed $600 million in ARR in Q1 2026, bringing total funding above $1 billion. Accenture also became AlphaSense's first strategic channel partner, embedding its AI workflow tools into agentic client systems.",
       "why_it_matters": "AlphaSense's near-doubling valuation on strong ARR growth signals durable enterprise demand for AI-native research and workflow intelligence tools. The Accenture channel deal is a meaningful distribution signal for B2B AI plays targeting large enterprise buyers.",
-      "sources": ["src-2026-06-03-alphasense-press"]
+      "sources": [
+        "src-2026-06-03-alphasense-press"
+      ]
     },
     {
       "id": "2026-06-02-openai-codex-on-aws-gpt52-retired-for-gpt55",
@@ -306,11 +413,16 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "technology",
       "subtag": "model-releases",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "OpenAI made its frontier models and Codex available natively on AWS, framed as 'Codex for every role, tool, and workflow.' Separately, GPT-5.2 was fully retired from ChatGPT with all conversations automatically migrated to GPT-5.5 — the fastest major version sunset in OpenAI's history. GPT-5.6 was confirmed by OpenAI's chief scientist as in preparation, described as a 'meaningful leap.'",
       "why_it_matters": "The AWS distribution deal signals that frontier model access is consolidating into cloud hyperscaler channels, tightening competitive moat for developers already on AWS while accelerating the deprecation cycle — a structural shift that raises switching costs and gives hyperscalers more pricing leverage over independent API consumers.",
-      "sources": ["src-2026-06-12-releasebot-openai-june"]
+      "sources": [
+        "src-2026-06-12-releasebot-openai-june"
+      ]
     },
     {
       "id": "2026-06-02-intel-ships-xeon-6-clearwater-forest-18a-node",
@@ -319,37 +431,17 @@
       "added": "2026-06-23T12:00:00Z",
       "section": "infrastructure",
       "subtag": "chips",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "Intel launched the Xeon 6+ 'Clearwater Forest' processor at Computex 2026, its first data center CPU manufactured on the Intel 18A process node. The flagship Xeon 6990E+ packs 288 efficiency cores in a single socket at a 450W TDP with 576MB of last-level cache and 96 PCIe lanes. Intel claims 1.3x perf-per-thread improvement over AMD EPYC 9965 and positioned the chip explicitly for agentic AI inference density.",
       "why_it_matters": "18A is Intel's bet-the-company process node; a credible data center ramp validates the foundry roadmap and reintroduces Intel as a competitive third option for hyperscaler CPU procurement, which has implications for both TSMC dependency risk and AMD's server share.",
-      "sources": ["src-2026-06-01-theregister-intel-xeon6", "src-2026-06-02-futurum-intel-xeon6"]
-    },
-    {
-      "id": "2026-06-01-canada-890m-sovereign-ai-supercomputer-scip",
-      "title": "Canada's $890M Sovereign AI Supercomputer Program (SCIP) Closes Applications",
-      "date": "2026-06-01",
-      "added": "2026-06-23T12:00:00Z",
-      "section": "infrastructure",
-      "subtag": "sovereign-compute",
-      "geography": ["Canada"],
-      "status": "new",
-      "summary": "Canada's AI Sovereign Compute Infrastructure Program (SCIP) closed its application window, capping a $890 million federal commitment to build a publicly owned, Canadian-operated AI supercomputing system over seven fiscal years starting 2026–27. SCIP is the largest of three pillars in Canada's $2 billion Sovereign AI Compute Strategy. Only Canadian non-profits, post-secondary institutions, or consortia they lead are eligible to receive awards.",
-      "why_it_matters": "Canada is structuring sovereign compute as national infrastructure — not a subsidy to hyperscalers — which creates a large captive market for domestic AI startups and research labs while reducing dependence on US cloud providers; the award decision will signal which institutions control Canadian AI's foundational layer.",
-      "sources": ["src-2026-06-01-ised-canada-scip"]
-    },
-    {
-      "id": "2026-05-19-google-deepmind-gemini-omni-flash-video-generation",
-      "title": "Google DeepMind Ships Gemini Omni Flash: Any-Modality-to-Video Generation at Consumer Scale",
-      "date": "2026-05-19",
-      "added": "2026-06-23T12:00:00Z",
-      "section": "technology",
-      "subtag": "modalities",
-      "geography": ["US", "Global"],
-      "status": "new",
-      "summary": "Announced at Google I/O, Gemini Omni Flash is the first model in a new Omni family that generates and edits video from any combination of text, images, audio, and video inputs. By June it was live across four surfaces — the Gemini app, Google Flow, YouTube Shorts Remix (free, 18+), and YouTube Create — while a developer API remained pending. The model family represents Google DeepMind's unification of perception and generation across all major modalities in a single architecture.",
-      "why_it_matters": "Omni's consumer-scale rollout across Google's 2B+ user surfaces compresses the timeline for multimodal AI to become a default creative layer, putting direct competitive pressure on OpenAI's Sora and Adobe's generative suite and signaling that video generation is now a distribution play, not just a research demo.",
-      "sources": ["src-2026-05-19-techcrunch-gemini-omni"]
+      "sources": [
+        "src-2026-06-01-theregister-intel-xeon6",
+        "src-2026-06-02-futurum-intel-xeon6"
+      ]
     },
     {
       "id": "2026-06-02-intel-crescent-island-gpu",
@@ -358,11 +450,33 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "infrastructure",
       "subtag": "chips",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "Intel teased the Crescent Island AI data center GPU at Computex 2026, featuring up to 480GB of LPDDR5X memory — an architecture choice that sidesteps the HBM supply bottleneck constraining competing accelerators. The chip targets inference workloads and is expected to sample in H2 2026. Its PCIe form factor enables deployment in existing server infrastructure without costly rack upgrades.",
       "why_it_matters": "Memory bandwidth, not raw FLOPS, is the actual binding constraint on modern inference — Crescent Island opens a window for non-NVIDIA supply chains and inference-optimized infra startups if hyperscalers adopt at scale.",
-      "sources": ["src-2026-06-datacenterdyn-intel"]
+      "sources": [
+        "src-2026-06-datacenterdyn-intel"
+      ]
+    },
+    {
+      "id": "2026-06-01-canada-890m-sovereign-ai-supercomputer-scip",
+      "title": "Canada's $890M Sovereign AI Supercomputer Program (SCIP) Closes Applications",
+      "date": "2026-06-01",
+      "added": "2026-06-23T12:00:00Z",
+      "section": "infrastructure",
+      "subtag": "sovereign-compute",
+      "geography": [
+        "Canada"
+      ],
+      "status": "new",
+      "summary": "Canada's AI Sovereign Compute Infrastructure Program (SCIP) closed its application window, capping a $890 million federal commitment to build a publicly owned, Canadian-operated AI supercomputing system over seven fiscal years starting 2026–27. SCIP is the largest of three pillars in Canada's $2 billion Sovereign AI Compute Strategy. Only Canadian non-profits, post-secondary institutions, or consortia they lead are eligible to receive awards.",
+      "why_it_matters": "Canada is structuring sovereign compute as national infrastructure — not a subsidy to hyperscalers — which creates a large captive market for domestic AI startups and research labs while reducing dependence on US cloud providers; the award decision will signal which institutions control Canadian AI's foundational layer.",
+      "sources": [
+        "src-2026-06-01-ised-canada-scip"
+      ]
     },
     {
       "id": "2026-06-01-us-chip-ban-extraterritorial",
@@ -371,11 +485,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "policy",
       "subtag": "export-controls",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "The US Commerce Department issued guidance clarifying that advanced AI chip export restrictions apply to Chinese-owned or Chinese-controlled entities regardless of their physical location, closing the Singapore and Malaysia routing workaround that had allowed some Chinese AI firms to access restricted Hopper/Blackwell-class hardware. The guidance takes effect immediately, with legal review processes available for affected entities.",
       "why_it_matters": "Directly kills compute-arbitrage plays routing through Southeast Asian subsidiaries; founders with any Chinese-capital structure or Chinese cloud partnerships must review hardware sourcing and corporate structure immediately.",
-      "sources": ["src-2026-06-01-aljazeera-chip-ban"]
+      "sources": [
+        "src-2026-06-01-aljazeera-chip-ban"
+      ]
     },
     {
       "id": "2026-05-28-anthropic-65b-series-h",
@@ -384,11 +502,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "capital",
       "subtag": "rounds",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "Anthropic closed the largest private financing in history — a $65 billion Series H led by Altimeter, Dragoneer, Greenoaks, and Sequoia — pushing its valuation to $965 billion. Sovereign and crossover investors participated alongside leading venture firms, cementing Anthropic as the most valuable private AI company. The round closed within weeks of being announced.",
       "why_it_matters": "Resets the ceiling for foundation-model rounds and signals that LPs will write checks at near-trillion valuations; the secondary read is that frontier-lab capex is now structurally decoupled from public-market multiples.",
-      "sources": ["src-2026-05-28-crunchbase-ai-rounds"]
+      "sources": [
+        "src-2026-05-28-crunchbase-ai-rounds"
+      ]
     },
     {
       "id": "2026-05-21-consumer-agent-adoption-question",
@@ -397,11 +519,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "theses",
       "subtag": "watching",
-      "geography": ["Global"],
+      "geography": [
+        "Global"
+      ],
       "status": "new",
       "summary": "Following Google IO, analysts are questioning whether consumer-facing agents like Gemini Spark will achieve meaningful adoption, noting that user behavior change — not raw AI capability — remains the gating factor. TechCrunch framed Google's consumer-agent pitch as a hard sell, pointing to low day-7 retention for assistant-style AI products outside task-specific workflows. Enterprise AI by contrast shows consistently higher retention where buyer mandates adoption.",
       "why_it_matters": "Bearish on consumer AI startups dependent on voluntary behavior change; strongly bullish on B2B vertical agents where procurement mandates use — near-term capital should continue flowing to enterprise-first builders.",
-      "sources": ["src-2026-05-21-techcrunch-consumer-agents"]
+      "sources": [
+        "src-2026-05-21-techcrunch-consumer-agents"
+      ]
     },
     {
       "id": "2026-05-20-cohere-240m-arr-ipo",
@@ -410,11 +536,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "adoption",
       "subtag": "revenue-benchmarks",
-      "geography": ["Canada"],
+      "geography": [
+        "Canada"
+      ],
       "status": "new",
       "summary": "Cohere has surpassed $240 million in annual recurring revenue and is reportedly working with advisors on a potential IPO, which would be the first public offering by a major non-US AI foundation-model company. ARR momentum is driven primarily by enterprise and government sovereign-AI contracts in North America and Europe. A public timeline has not been confirmed.",
       "why_it_matters": "Cohere would set the first public reference comparable for enterprise-AI platform companies outside the US — its ARR multiple at IPO will recalibrate private valuations for Sarvam, Mistral, and other non-US AI contenders.",
-      "sources": ["src-2026-05-techfundingnews-cohere-ipo"]
+      "sources": [
+        "src-2026-05-techfundingnews-cohere-ipo"
+      ]
     },
     {
       "id": "2026-05-20-eu-ai-export-controls-draft",
@@ -423,11 +553,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "policy",
       "subtag": "export-controls",
-      "geography": ["Global"],
+      "geography": [
+        "Global"
+      ],
       "status": "new",
       "summary": "The European Commission is circulating a draft regulation that would add AI hardware above a ~300 TFLOPS threshold, trained model weights, and AI cloud services to its list of 'hyper-critical items' requiring export licenses for sales to certain third countries. The proposal marks the first time AI model weights would be treated as a controlled technology under EU export law. Industry groups are pushing back on the weights classification as unworkable.",
       "why_it_matters": "If model weights become controlled goods, open-weight AI companies in Europe face new compliance infrastructure costs and geographic licensing constraints — license-management tooling and legal-entity structuring become fundable categories.",
-      "sources": ["src-2026-05-aicerts-eu-controls"]
+      "sources": [
+        "src-2026-05-aicerts-eu-controls"
+      ]
     },
     {
       "id": "2026-05-20-lab-retention-benchmarks",
@@ -436,11 +570,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "talent",
       "subtag": "key-hires",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "Aggregated job-change data shows Anthropic at 80% retention, DeepMind at 78%, and OpenAI at 67%. OpenAI's lower figure follows a turbulent period including a reported board coup, the departure of its CTO, a safety-team exodus, and three executive exits in April 2026 alone. Anthropic attributes its higher retention to cultural alignment and equity structure.",
       "why_it_matters": "Anthropic's retention edge is a quantifiable moat embedded in its Series H valuation — for investors benchmarking AI infrastructure bets, researcher continuity is a competitive signal worth tracking alongside capability rankings.",
-      "sources": ["src-2026-05-jobsbyculture-openai"]
+      "sources": [
+        "src-2026-05-jobsbyculture-openai"
+      ]
     },
     {
       "id": "2026-05-20-moat-not-the-model",
@@ -449,11 +587,33 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "theses",
       "subtag": "thesis",
-      "geography": ["Global"],
+      "geography": [
+        "Global"
+      ],
       "status": "new",
       "summary": "A widely circulated Andreessen Horowitz and Foundation Capital position holds that as AI models commoditize and prices fall, durable defensibility will reside in product design, go-to-market distribution, proprietary training data, and workflow integration — not model access. The thesis is supported by emerging data showing that application-layer companies with high switching costs are retaining customers and expanding revenue even as base model quality converges across providers.",
       "why_it_matters": "This is the load-bearing question for portfolio construction: investors need exclusive data, network effects, or workflow lock-in as proof points — a benchmark advantage without those will not survive the next price cycle.",
-      "sources": ["src-2026-05-aicorner-andreessen-moat"]
+      "sources": [
+        "src-2026-05-aicorner-andreessen-moat"
+      ]
+    },
+    {
+      "id": "2026-05-19-google-deepmind-gemini-omni-flash-video-generation",
+      "title": "Google DeepMind Ships Gemini Omni Flash: Any-Modality-to-Video Generation at Consumer Scale",
+      "date": "2026-05-19",
+      "added": "2026-06-23T12:00:00Z",
+      "section": "technology",
+      "subtag": "modalities",
+      "geography": [
+        "US",
+        "Global"
+      ],
+      "status": "new",
+      "summary": "Announced at Google I/O, Gemini Omni Flash is the first model in a new Omni family that generates and edits video from any combination of text, images, audio, and video inputs. By June it was live across four surfaces — the Gemini app, Google Flow, YouTube Shorts Remix (free, 18+), and YouTube Create — while a developer API remained pending. The model family represents Google DeepMind's unification of perception and generation across all major modalities in a single architecture.",
+      "why_it_matters": "Omni's consumer-scale rollout across Google's 2B+ user surfaces compresses the timeline for multimodal AI to become a default creative layer, putting direct competitive pressure on OpenAI's Sora and Adobe's generative suite and signaling that video generation is now a distribution play, not just a research demo.",
+      "sources": [
+        "src-2026-05-19-techcrunch-gemini-omni"
+      ]
     },
     {
       "id": "2026-05-19-google-io-gemini-spark-agents",
@@ -462,11 +622,17 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "companies",
       "subtag": "incumbents",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "At Google IO 2026, Google launched Gemini Spark, a general-purpose consumer agent that reasons across connected apps and third-party services, alongside agentic capabilities in Search that can complete multi-step tasks on behalf of users. The rollout is Google's most direct move into the consumer-agent layer to date. Project Mariner desktop automation was also previewed for enterprise.",
       "why_it_matters": "Google entering consumer agents expands the kill-zone for AI-assistant startups while simultaneously opening distribution for vertical agents that integrate into the Gemini ecosystem — bifurcates the risk for consumer vs. B2B agent founders.",
-      "sources": ["src-2026-05-19-cnbc-google-io", "src-2026-05-19-google-blog-search"]
+      "sources": [
+        "src-2026-05-19-cnbc-google-io",
+        "src-2026-05-19-google-blog-search"
+      ]
     },
     {
       "id": "2026-05-19-gemini-3-1-ultra-flash",
@@ -475,11 +641,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "technology",
       "subtag": "model-releases",
-      "geography": ["Global"],
+      "geography": [
+        "Global"
+      ],
       "status": "new",
       "summary": "Google released Gemini 3.1 Ultra with native 2 million-token multimodal context across text, image, audio, and video, alongside Gemini 3.5 Flash offering frontier-comparable quality at roughly one-third the cost. Ultra targets deep document analysis and long-horizon agents. Flash accelerates always-on and high-frequency agent use cases that were previously cost-prohibitive.",
       "why_it_matters": "Price collapse at the Flash tier compresses margins for AI-wrapper startups but unlocks always-on agent categories that were economically infeasible six months ago; 2M context makes long-document workflows a commodity.",
-      "sources": ["src-2026-05-19-cnbc-google-io"]
+      "sources": [
+        "src-2026-05-19-cnbc-google-io"
+      ]
     },
     {
       "id": "2026-05-15-sovereign-compute-canada-india",
@@ -488,11 +658,17 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "infrastructure",
       "subtag": "sovereign-compute",
-      "geography": ["Canada", "India"],
+      "geography": [
+        "Canada",
+        "India"
+      ],
       "status": "new",
       "summary": "Canada's federal government finalized a $240 million CAD commitment to Cohere under its $2 billion Sovereign AI Compute Strategy — the first major disbursement and the largest direct government investment in a Canadian AI company. Separately, Microsoft announced a $17.5 billion investment in India AI and cloud infrastructure to be deployed over 2026–2029, its largest-ever Asia commitment. IndiaAI Mission is simultaneously providing subsidized GPU access at ~Rs 150/hour across 34,000 GPUs for domestic startups.",
       "why_it_matters": "Sovereign-compute capital is now a real and substantial funding alternative to venture for national AI champions — co-investment angles exist for VCs willing to navigate political dependencies and slower decision cycles.",
-      "sources": ["src-2026-05-betakit-cohere-compute", "src-2026-05-abhs-indiaai"]
+      "sources": [
+        "src-2026-05-betakit-cohere-compute",
+        "src-2026-05-abhs-indiaai"
+      ]
     },
     {
       "id": "2026-05-15-india-ai-regulation-mission",
@@ -501,11 +677,16 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "policy",
       "subtag": "gov-strategy",
-      "geography": ["India"],
+      "geography": [
+        "India"
+      ],
       "status": "new",
       "summary": "India's IndiaAI Mission is providing subsidized GPU compute at approximately Rs 150/GPU-hour across a pool of 34,000 GPUs available to domestic AI startups through a competitive application process. The government has established an AI regulatory task force focused on ethics and legal frameworks, signaling a preference for industrial-policy support over restrictive regulation. Data-protection obligations under India's DPDP framework continue to be clarified for AI training data use.",
       "why_it_matters": "India's industrial-policy-first approach lowers compliance burden relative to the EU, making India favorable as a development and deployment market; the compute subsidy meaningfully reduces the barrier for founders without hyperscaler access.",
-      "sources": ["src-2026-05-abhs-indiaai", "src-2026-05-mindfoundry-india-regs"]
+      "sources": [
+        "src-2026-05-abhs-indiaai",
+        "src-2026-05-mindfoundry-india-regs"
+      ]
     },
     {
       "id": "2026-05-15-spacexai-50-researcher-exodus",
@@ -514,11 +695,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "talent",
       "subtag": "founder-moves",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "More than 50 AI researchers left SpaceXAI following its absorption into xAI, with departures hitting teams working on Grok coding, world models, voice, and pre-training infrastructure. Culture clashes, burnout, and aggressive recruiting by Meta and Thinking Machines Lab were cited. Some departures were targeted hires; others were voluntary exits driven by mission-drift concerns.",
       "why_it_matters": "A 50+ researcher dispersion from a single organization is a leading indicator of new company formation — expect a wave of seed-stage startups from xAI alumni in world models and voice over the next 6–9 months.",
-      "sources": ["src-2026-05-15-techstartups-xai-exodus"]
+      "sources": [
+        "src-2026-05-15-techstartups-xai-exodus"
+      ]
     },
     {
       "id": "2026-05-15-services-as-software-pricing",
@@ -527,11 +712,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "theses",
       "subtag": "debate",
-      "geography": ["Global"],
+      "geography": [
+        "Global"
+      ],
       "status": "new",
       "summary": "As AI agents take on work previously done by human service contractors, venture investors are pushing portfolio companies toward hybrid pricing — a base subscription plus usage fees tied to measurable outcomes — rather than pure per-seat SaaS models. Early movers in legal, accounting, and customer support are experimenting with cost-per-task and outcome-per-outcome billing. The model compresses gross margin on deployment-heavy workflows but dramatically expands total addressable market.",
       "why_it_matters": "Standard ARR-per-seat diligence frameworks are inadequate for outcome-priced AI companies — investors need new metrics: gross margin on agent-hours, outcome-attribution proofs, and retention curves that don't assume seat-based churn.",
-      "sources": ["src-2026-05-vccorner-outcome-pricing"]
+      "sources": [
+        "src-2026-05-vccorner-outcome-pricing"
+      ]
     },
     {
       "id": "2026-05-14-anthropic-opus-47",
@@ -540,11 +729,16 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "technology",
       "subtag": "model-releases",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "Anthropic released Opus 4.7, positioning it as a more literal, more controllable, and lower-risk model compared to earlier Opus versions, targeting enterprise buyers who need predictable, auditable outputs. The release widens Anthropic's differentiation from OpenAI's 'work model' GPT-5.5 framing. Benchmarks show strong performance on instruction-following and refusal precision.",
       "why_it_matters": "Anthropic is doubling down on enterprise-safe positioning as a durable moat — B2B AI investors should map model-selection rationale to buyer risk profiles, not just benchmark rankings.",
-      "sources": ["src-2026-05-whatllm-models"]
+      "sources": [
+        "src-2026-05-whatllm-models"
+      ]
     },
     {
       "id": "2026-05-14-thinking-machines-lab-exodus",
@@ -553,11 +747,16 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "talent",
       "subtag": "key-hires",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "Approximately one-third of the founding team at Thinking Machines Lab, an agentic-AI startup with a multi-billion-dollar valuation, departed within a short window — five founders to Meta (one reportedly offered a $1.5 billion package), five to OpenAI, and one to xAI. Co-founder Barret Zoph was reportedly fired and subsequently rejoined OpenAI. Departures hit pre-training, product, and research functions.",
       "why_it_matters": "Even at multi-billion valuations, cash-rich Big Tech can out-bid startups for founding talent — investors must price retention risk explicitly and negotiate golden-handcuff structures at term sheet, not post-close.",
-      "sources": ["src-2026-05-14-americanbazaar-tm", "src-2026-05-14-thenextweb-meta"]
+      "sources": [
+        "src-2026-05-14-americanbazaar-tm",
+        "src-2026-05-14-thenextweb-meta"
+      ]
     },
     {
       "id": "2026-05-13-notion-agent-platform",
@@ -566,11 +765,16 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "companies",
       "subtag": "breakouts",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "Notion opened its workspace to third-party AI agents, external data connectors, and custom code execution, effectively positioning the product as a runtime for autonomous workflows rather than a document tool. The platform includes APIs for reading and writing Notion data, triggering automations, and composing multi-step agent pipelines. Early partners include several enterprise productivity and CRM vendors.",
       "why_it_matters": "Workspace incumbents racing to become agent orchestration layers raises the distribution bar for horizontal-agent startups — investors should push for domain data moats, not just orchestration primitives.",
-      "sources": ["src-2026-05-13-techcrunch-notion"]
+      "sources": [
+        "src-2026-05-13-techcrunch-notion"
+      ]
     },
     {
       "id": "2026-05-10-enterprise-roi-gap",
@@ -579,11 +783,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "adoption",
       "subtag": "pilots",
-      "geography": ["Global"],
+      "geography": [
+        "Global"
+      ],
       "status": "new",
       "summary": "A May 2026 survey of enterprise AI buyers found that 97% of executives report some AI-driven benefit, but only 29% have achieved meaningful ROI at the organizational scale. Eighty-six percent plan to increase AI budgets in 2026; 74% cite revenue growth as their primary goal while only 20% have achieved it. Change management, data quality, and integration complexity are the top cited blockers.",
       "why_it_matters": "Pilot purgatory is alive and widening — services-layer, deployment-automation, and outcome-priced agent startups have a large, well-funded market of buyers who have committed to AI but cannot extract value alone.",
-      "sources": ["src-2026-05-writer-enterprise-roi"]
+      "sources": [
+        "src-2026-05-writer-enterprise-roi"
+      ]
     },
     {
       "id": "2026-05-01-cognition-ai-1b-series-d",
@@ -592,11 +800,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "capital",
       "subtag": "rounds",
-      "geography": ["US"],
+      "geography": [
+        "US"
+      ],
       "status": "new",
       "summary": "Cognition AI, maker of the Devin software agent, closed a $1 billion-plus Series D co-led by Lux Capital, General Catalyst, and 8VC, with its valuation more than doubling in under eight months. The round comes despite intensifying competition from Cursor and Windsurf. Cognition is now among the fastest-growing agentic-coding companies by ARR.",
       "why_it_matters": "Validates the agentic-coding category and suggests pricing power survives competition; investors are betting that workflow integration and trust — not raw model quality — will determine the winner.",
-      "sources": ["src-2026-05-28-crunchbase-ai-rounds"]
+      "sources": [
+        "src-2026-05-28-crunchbase-ai-rounds"
+      ]
     },
     {
       "id": "2026-05-01-openai-gpt55-instant-default",
@@ -605,11 +817,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "technology",
       "subtag": "paradigms",
-      "geography": ["Global"],
+      "geography": [
+        "Global"
+      ],
       "status": "new",
       "summary": "OpenAI promoted GPT-5.5 Instant to the default model for ChatGPT and the API, framing it around agentic coding, computer use, knowledge work, and early research. The model is positioned as faster and more cost-efficient than GPT-5 for task-completion workflows. 'Computer use' is now an explicit and marketed use-case category in OpenAI's product positioning.",
       "why_it_matters": "Browser and desktop automation is now table stakes from the foundation model layer itself — startups whose moat was computer-use automation must move up-stack to domain workflow and proprietary data.",
-      "sources": ["src-2026-05-whatllm-models"]
+      "sources": [
+        "src-2026-05-whatllm-models"
+      ]
     },
     {
       "id": "2026-05-01-global-ai-spend-301b",
@@ -618,11 +834,15 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "adoption",
       "subtag": "enterprise-spend",
-      "geography": ["Global"],
+      "geography": [
+        "Global"
+      ],
       "status": "new",
       "summary": "Global AI spending is tracking to $301 billion in 2026, up from $223 billion in 2025, with AI software alone representing $157 billion according to Deloitte and IDC data. Seventy-two percent of enterprises surveyed report at least one production AI deployment. Budget owners cite agent automation, code generation, and knowledge retrieval as the top production use cases.",
       "why_it_matters": "Production deployment percentage crossing the chasm should compress sales cycles for enterprise AI startups and raise the revenue-quality bar at Series B — investors now need to distinguish pilot ARR from retained, scaled ARR.",
-      "sources": ["src-2026-05-deloitte-ai-enterprise"]
+      "sources": [
+        "src-2026-05-deloitte-ai-enterprise"
+      ]
     },
     {
       "id": "2026-04-24-cohere-aleph-alpha-merger",
@@ -631,11 +851,16 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "companies",
       "subtag": "incumbents",
-      "geography": ["Canada", "Global"],
+      "geography": [
+        "Canada",
+        "Global"
+      ],
       "status": "new",
       "summary": "Cohere and Germany's Aleph Alpha completed a merger to form a combined entity valued at approximately $20 billion, backed by the Schwarz Group with a ~$600 million commitment. The deal creates the first credible transatlantic sovereign-AI challenger to US and Chinese frontier labs. The combined company targets regulated enterprises and government buyers across North America and Europe.",
       "why_it_matters": "First credible non-US/non-China consolidation in AI; 'sovereign enterprise AI' is now a fundable and scalable category distinct from frontier-lab racing — opens a co-investment thesis for VCs targeting government-adjacent contracts.",
-      "sources": ["src-2026-04-techfundingnews-cohere-aleph"]
+      "sources": [
+        "src-2026-04-techfundingnews-cohere-aleph"
+      ]
     },
     {
       "id": "2026-04-01-india-q1-ai-funding-record",
@@ -644,11 +869,16 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "capital",
       "subtag": "investor-activity",
-      "geography": ["India"],
+      "geography": [
+        "India"
+      ],
       "status": "new",
       "summary": "Indian AI startups attracted $1.48 billion in Q1 2026, representing 38% of total startup funding in the country, with Sarvam AI's $53 million Series A — backed by Lightspeed, Peak XV, and Khosla — among the marquee deals. However, Krutrim, India's first GenAI unicorn, pivoted from model development to cloud services amid commercial headwinds, illustrating the difficulty of competing at the model layer. Global funds participated in a growing share of early-stage rounds.",
       "why_it_matters": "India is a high-velocity early-stage AI market, but the Krutrim pivot confirms that model-layer economics are brutal domestically — the investable thesis is distribution, applied AI, and sovereign-compute-adjacent tooling.",
-      "sources": ["src-2026-05-ibtimes-india-ai", "src-2026-05-05-techcrunch-krutrim"]
+      "sources": [
+        "src-2026-05-ibtimes-india-ai",
+        "src-2026-05-05-techcrunch-krutrim"
+      ]
     },
     {
       "id": "2026-03-17-nvidia-rubin-platform",
@@ -657,11 +887,16 @@
       "added": "2026-06-03T12:00:00Z",
       "section": "infrastructure",
       "subtag": "chips",
-      "geography": ["US", "Global"],
+      "geography": [
+        "US",
+        "Global"
+      ],
       "status": "new",
       "summary": "NVIDIA announced the Rubin GPU platform at GTC 2026, comprising six new chips including Rubin and Rubin Ultra, and a paired NVLink Fusion rack-scale supercomputer designed to extend NVIDIA's lead in AI training and inference. The platform is designed to bridge through 2027. Samples are expected in late 2026 with production volumes in 2027.",
       "why_it_matters": "Locks in another 18-month NVIDIA compute lead; cloud GPU startups need to secure Rubin allocation now to remain credible alternatives to hyperscalers — access, not specs, is the competitive variable.",
-      "sources": ["src-2026-03-nvidia-rubin"]
+      "sources": [
+        "src-2026-03-nvidia-rubin"
+      ]
     }
   ]
 }
